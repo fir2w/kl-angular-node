@@ -1,0 +1,20 @@
+<div ng-controller="publishNeedController">
+    <div class="info_c4">
+        <p class="p_p6">请填写下面表单后完成任务：</p>
+
+        <p class="p_p7"><span>项目名称：</span><input type="text" class="text1" ng-model="outsourcingProject.name_"></p>
+
+        <p class="p_p7"><span>作品上传截止时间：</span><input type="text" class="text1" pikaday="myPickerObject" ng-model="outsourcingProject.deadline_">
+        </p>
+
+        <p class="p_p7"><span>需求描述及要求：</span><input type="text" class="text1"
+                                                    ng-model="outsourcingProject.description_"/></p>
+
+        <p class="p_p7"><span>悬赏金额：<font class="info_color1">*</font></span><input type="text" class="text1"
+                                                                                   ng-model="outsourcingProject.bounty_"/>
+        </p>
+
+        <p class="p_p7"><span>上传附件资料：</span><input type="text" class="text1"/></p>
+    </div>
+    <p class="p_p8"><a  ng-click="completeTask()">完成任务</a><a >重置表单</a></p>
+</div>

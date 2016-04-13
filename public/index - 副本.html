@@ -1,0 +1,205 @@
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="bower_components/bootstrap-css/css/bootstrap.css">
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+    <!-- endbuild -->
+
+    <!-- build:css(.tmp) styles/other.css -->
+    <link rel="stylesheet" href="bower_components/fullcalendar/fullcalendar.css">
+    <link rel="stylesheet" href="third-lib/ui-layout/ui-layout.css">
+    <link rel="stylesheet" href="third-lib/treetable/css/jquery.treegrid.css">
+
+
+
+    <link rel="stylesheet" href="styles/flaty/flaty.css">
+    <link rel="stylesheet" href="styles/flaty/flaty-responsive.css">
+    <link rel="stylesheet" href="styles/flaty/chosen.css">
+    <link rel="stylesheet" href="styles/jqstooltip.css">
+    <link rel="stylesheet" href="styles/dialog.css">
+    <link rel="stylesheet" href="styles/todolist.css">
+    <link rel="stylesheet" href="styles/kanban.css">
+    <link rel="stylesheet" href="styles/dialog/iblue.css">
+    <link rel="stylesheet" href="styles/webim/webim.css">
+    <link rel="stylesheet" href="styles/main.css">
+
+
+    <!-- endbuild -->
+</head>
+<body ng-app="klwork">
+<!--[if lt IE 9]>
+<script src="bower_components/es5-shim/es5-shim.js"></script>
+<script src="bower_components/json3/lib/json3.min.js"></script>
+<![endif]-->
+
+<div id="all" ng-controller="MainCtrl" style="width:100%;overflow:hidden;">
+    <!-- 导航条 -->
+    <div id="navbar" class="navbar" ng-include="'views/layout/nav.view.html'" ng-controller="NavBarCtrl">
+    </div>
+
+    <!-- 下面的主体容器 -->
+    <div class="container" id="main-container">
+        <div ng-show="sidebarShow">
+            <!-- 菜单 -->
+            <sidebar>
+                <ul class="nav nav-list" style="height: auto;">
+                    <li>
+                        <form target="#" method="GET" class="search-form">
+                        <span class="search-pan">
+                    <button type="submit">
+
+                        <i class="fa fa-search"></i>
+                    </button>
+                    <input type="text" name="search" placeholder="Search ..." autocomplete="off">
+                    </span>
+                        </form>
+                    </li>
+                    <menu ng-repeat="menu in menus" menu-name="menu.menuName" is-active="menu.isActive" sign="menu.sign"
+                          speical-style="menu.speicalStyle"/>
+                </ul>
+                <sidebarcollapse/>
+            </sidebar>
+        </div>
+        <div id="main-content">
+            <!-- 应用程序内容变化区 -->
+            <div id="view-content" ng-view=""></div>
+            <a id="btn-scrollup" class="btn btn-circle btn-lg" href="#"><i class="fa fa-chevron-up"></i></a>
+            <footer>
+                <p>2014 © KLWORK.</p>
+            </footer>
+        </div>
+    </div>
+
+    <!-- 浮动条-->
+    <div id="flotTip" style="display: none; position: absolute;"></div>
+
+    <!-- 主题颜色设置区 -->
+
+    <!-- 聊天框显示 -->
+    <div id="wbim_box" class="wbim_box" style="position: fixed; bottom: 0px; right: 20px;"
+         ng-include="'views/layout/im.view.html'" ng-controller="ImCtrl"></div>
+
+</div>
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+<script>
+</script>
+
+<!-- build:js scripts/lib.js -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<!-- endbuild -->
+
+<script src="/socket.io/socket.io.js"></script>
+
+<!-- build:js scripts/plugins.js -->
+<script src="bower_components/underscore/underscore.js"></script>
+<script src="bower_components/bootstrap-css/js/bootstrap.js"></script>
+<script src="bower_components/jquery-ui/ui/jquery.ui.core.js"></script>
+<script src="bower_components/jquery-ui/ui/jquery.ui.widget.js"></script>
+<script src="bower_components/jquery-ui/ui/jquery.ui.mouse.js"></script>
+<script src="bower_components/jquery-ui/ui/jquery.ui.draggable.js"></script>
+<script src="bower_components/jquery-ui/ui/jquery.ui.droppable.js"></script>
+<script src="bower_components/jquery-ui/ui/jquery.ui.sortable.js"></script>
+<script src="bower_components/jquery-cookie/jquery.cookie.js"></script>
+<script src="bower_components/jquery-flot/jquery.flot.js"></script>
+<script src="bower_components/jquery-flot/jquery.flot.resize.js"></script>
+<script src="bower_components/jquery-flot/jquery.flot.pie.js"></script>
+<script src="bower_components/jquery-flot/jquery.flot.stack.js"></script>
+<script src="bower_components/jquery-flot/jquery.flot.crosshair.js"></script>
+<script src="bower_components/flot.tooltip/js/jquery.flot.tooltip.js"></script>
+<script src="bower_components/jquery.slimscroll/jquery.slimscroll.js"></script>
+
+<script src="scripts/lib/jquery.sparkline.min.js"></script>
+<script src="scripts/lib/lhgdialog.min.js"></script>
+<script src="scripts/lib/jquery.mjs.nestedSortable.js"></script>
+<script src="scripts/lib/tools.lib.js"></script>
+<script src="scripts/lib/mocks.lib.js"></script>
+<script src="third-lib/taffy.js"></script>
+<script src="third-lib/async.js"></script>
+<script src="third-lib/My97DatePicker/WdatePicker.js"></script>
+<script src="third-lib/date-zh-CN.js"></script>
+<script src="third-lib/ui-layout/ui-layout.js"></script>
+<script src="third-lib/treetable/jquery.treegrid.js"></script>
+
+<script src="third-lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<!-- endbuild -->
+
+
+<!-- build:js scripts/modules.js -->
+<script src="bower_components/angular-uuid4/angular-uuid4.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-mocks/angular-mocks.js"></script>
+<script src="bower_components/fullcalendar/fullcalendar.js"></script>
+<script src="bower_components/fullcalendar/gcal.js"></script>
+<script src="bower_components/angular-ui-calendar/src/calendar.js"></script>
+
+<!-- endbuild -->
+
+<!-- build:js({.tmp,app}) scripts/scripts.js -->
+<script src="scripts/template/sidebar/sidebar.html.js"></script>
+<script src="scripts/template/sidebar/menu.html.js"></script>
+<script src="scripts/template/sidebar/sidebar-collapse.html.js"></script>
+<script src="scripts/template/treetable/treetable.html.js"></script>
+<script src="scripts/template/treetable/treetable-item.html.js"></script>
+<script src="scripts/template/wdatepicker/wdatepicker.html.js"></script>
+
+<script src="scripts/app.js"></script>
+<script src="scripts/directives/yaTree.js"></script>
+<script src="scripts/directives/uiNestedSortable.js"></script>
+<script src="scripts/services/socket.service.js"></script>
+<script src="scripts/services/ui.klwork.config.js"></script>
+<script src="scripts/services/ui.klwork.service.js"></script>
+<script src="scripts/services/userManager.service.js"></script>
+<script src="scripts/services/uiManager.service.js"></script>
+<script src="scripts/services/dataMockManager.service.js"></script>
+<script src="scripts/directives/wigets.directive.js"></script>
+<script src="scripts/directives/sidebar.directive.js"></script>
+<script src="scripts/directives/wDatePicker.directive.js"></script>
+<script src="scripts/directives/dialog.directive.js"></script>
+<script src="scripts/directives/uiTreetable.directive.js"></script>
+<script src="scripts/filters/ui.klwork.filter.js"></script>
+<script src="scripts/controllers/main.controller.js"></script>
+<script src="scripts/controllers/navbar.controller.js"></script>
+<script src="scripts/controllers/dashboard.controller.js"></script>
+<script src="scripts/controllers/hallMain.controller.js"></script>
+<script src="scripts/controllers/profile.controller.js"></script>
+<script src="scripts/controllers/im.controller.js"></script>
+<script src="scripts/controllers/team/myTeams.controller.js"></script>
+<script src="scripts/controllers/myroute.js"></script>
+<script src="scripts/controllers/calendar.controller.js"></script>
+<script src="scripts/controllers/login.controller.js"></script>
+<script src="scripts/controllers/team/teamMain.controller.js"></script>
+<script src="scripts/controllers/team/myPeoples.controller.js"></script>
+<script src="scripts/controllers/task/taskMain.controller.js"></script>
+<script src="scripts/controllers/task/inboxTask.controller.js"></script>
+<script src="scripts/controllers/project.js"></script>
+<script src="scripts/controllers/social.js"></script>
+<script src="scripts/controllers/crowdsourcing.js"></script>
+<script src="scripts/controllers/tasks.js"></script>
+
+<script src="scripts/filters/interpolate.js"></script>
+<script src="scripts/services/kanbanServices.js"></script>
+<script src="scripts/controllers/kanban.js"></script>
+
+<!-- endbuild -->
+

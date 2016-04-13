@@ -1,0 +1,16 @@
+{
+  list: [
+    {
+      groupName: 'admin',
+      avNum: '333',
+      res: [
+        {
+          id_number: '1234',
+          name: 'ww',
+          ava: 'false',
+          state: 'xxxx'
+        }
+      ]
+    }
+  ]
+}

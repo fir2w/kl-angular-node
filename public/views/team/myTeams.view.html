@@ -1,0 +1,99 @@
+<div ng-controller="myteamsController">
+    <div ui-layout="{ flow : 'column' }">
+        <!-- 左边的内容 -->
+        <div weight-size="20">
+            <div class="page-title">
+                <div>
+                    <h2 style="margin-left:20px;margin-top:20px;"><i class="fa fa-file-o"></i> 我的团队</h2>
+                </div>
+            </div>
+            <div class="mail-nav">
+                <ul ng-repeat="team in myteams">
+                    <li ng-class="{active:$index==selectedRowIndex}" style="border-bottom:1px solid #ccc;cursor:pointer;">
+                        <a ng-click="changeCurrentSelected(team,$index)">{{team.name_}}</a>
+                    </li>
+                </ul>
+            </div>
+            <div style="clear:both"></div>
+            <div class="row">
+                <label class="col-sm-4 col-lg-3 control-label">新增团队名称</label>
+
+                <div class="col-sm-8 col-lg-9 controls">
+                    <input type="text" value="" ng-model="submitTeam.name_" class="form-control">
+                </div>
+            </div>
+
+            <div class="row">
+                <label class="col-sm-4 col-lg-3 control-label"></label>
+
+                <div class="col-sm-8 col-lg-9 controls">
+                    <button type="保存" class="btn btn-primary" ng-click="saveTeam()">保存</button>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- 右边的内容 -->
+        <div weight-size="80">
+            <div class="box">
+                <div class="box-title">
+                    <h3><i class="fa fa-table"></i> 团队人员列表</h3>
+                </div>
+                <div class="box-content">
+                    <div class="btn-toolbar pull-right">
+                        <div class="btn-group">
+                            <a class="btn btn-circle btn-fill  show-tooltip" title=""
+                               ng-click="addMember()" data-original-title="Add new record"><i
+                                    class="fa fa-plus"></i></a>
+                        </div>
+                        <div class="btn-group">
+                            <a class="btn btn-circle btn-fill btn-to-lime show-tooltip" title="" href="#"
+                               data-original-title="Refresh"><i class="fa fa-repeat"></i></a>
+                        </div>
+                    </div>
+                    <br>
+                    </br>
+                    <div class="table-responsive">
+                        <table class="table table-advance dataTable" id="table1" aria-describedby="table1_info">
+                            <thead>
+                            <tr role="row">
+                                <th style="width: 15px;" class="sorting_disabled" ><input type="checkbox"></th>
+                                <th class="sorting" role="columnheader"
+                                    style="width: 183px;">用户id
+                                </th>
+                                <th class="sorting"
+                                    style="width: 280px;">firstName
+                                </th>
+                                <th class="sorting" role="columnheader"
+                                    style="width: 173px;">lastName
+                                </th>
+                                <th class="text-center sorting"
+                                    style="width: 151px;">email
+                                </th>
+                                <th class="sorting"
+                                    style="width: 103px;">操作
+                                </th>
+                            </tr>
+                            </thead>
+
+                            <tbody>
+                            <tr class="table-flag-blue odd" ng-repeat="user in opers.currentTeamMembers">
+                                <td></td>
+                                <td>{{user.id_}}</td>
+                                <td>{{user.first_}}</td>
+                                <td>{{user.last_}}</td>
+                                <td>{{user.email_}}</td>
+                                <td></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 打开的窗口 -->
+
+</div>

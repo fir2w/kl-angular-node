@@ -1,0 +1,54 @@
+<div class="kanban">
+    <div id="page">
+        <header class="clearfix">
+            <nav>
+                <ul>
+                    <li><a href="#" class="button newtask" title="new task ui-state-default"><img src="images/kanban/plus.png"
+                                                                                                  alt="plus"/>new
+                        task</a></li>
+                    <li><a href="#" class="button newcolumn" title="new column"><img src="images/kanban/plus.png" alt="plus"/>new
+                        column</a></li>
+                </ul>
+            </nav>
+        </header>
+
+
+        <div id="columns" class="clearfix">
+            <div id="columns-box">
+
+                <!-- column -->
+                <div class="column column-root" ng-repeat="column in columns">
+                    <!-- box -->
+                    <div class="column-box droptrue clearfix" ng-repeat="box in column"
+                         style="background-color: {{box.color}">
+                        <h2 class="label dropfalse">{{box.title}}</h2>
+                        <!-- ticket -->
+                        <article class="task c-blue clearfix" ng-repeat="ticket in box.tickets"
+                                 style="background-color: {{ticket.color}}">
+                            <div class="icon"></div>
+                            <h3>{{ticket.title}}</h3>
+
+                            <div>{{ticket.shortDescription}}</div>
+                            <a href="#" class="coments box" title="Coments">0</a>
+                        </article>
+                        <!-- / ticket -->
+                    </div>
+                    <!-- /box -->
+                </div>
+                <!-- /column -->
+
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $( "div.droptrue" ).sortable({
+        connectWith: "div.column-box"
+    });
+    alert("hello");
+    $( "div.dropfalse" ).sortable({
+        connectWith: "div.column-box",
+        dropOnEmpty: false
+    });
+   // $( "#sortable1, #sortable2, #sortable3" ).disableSelection();
+</script>

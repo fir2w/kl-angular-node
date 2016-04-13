@@ -1,0 +1,7 @@
+<tr id="{{itemData.id_}}"  class="treegrid-{{itemData.id_}} treegrid-parent-{{itemData.pid_}}" ng-class="{'folder':(itemData.is_container_ == '1'),'file':(itemData.is_container_=='0')}">
+    <td><span>{{itemData.name_}}</span>
+        <button ng-click="addChild(itemData.id_)">+</button>
+    </td>
+    <td>Folder</td>
+    <td>--</td>
+</tr>

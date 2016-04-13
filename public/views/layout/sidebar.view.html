@@ -1,0 +1,18 @@
+<sidebar>
+    <ul class="nav nav-list" style="height: auto;">
+        <li>
+            <form target="#" method="GET" class="search-form">
+<span class="search-pan">
+<button type="submit">
+    <i class="fa fa-search"></i>
+</button>
+<input type="text" name="search" placeholder="Search ..." autocomplete="off">
+</span>
+            </form>
+        </li>
+
+        <menu ng-repeat="menu in menus" menu-name="menu.menuName" is-active="menu.isActive" sign="menu.sign"
+              speical-style="menu.speicalStyle"/>
+    </ul>
+    <sidebarcollapse/>
+</sidebar>

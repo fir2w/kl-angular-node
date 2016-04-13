@@ -1,0 +1,79 @@
+<div ng-controller="inboxTaskController" class="task-detail">
+    <div ui-layout="{ flow : 'column' }">
+        <div weight-size="20">
+            <!-- # 任务列表页面 -->
+            <div class="page-title">
+                <div>
+                    <h2 style="margin-left:20px;margin-top:20px;"><i class="fa fa-file-o"></i> 代办任务</h2>
+                </div>
+            </div>
+            <div class="mail-nav">
+                <ul ng-repeat="task in tasks">
+                    <li ng-class="{active:$index==selectedRowIndex}"
+                        style="border-bottom:1px solid #ccc;cursor:pointer;">
+                        <a ng-click="changeCurrentSelected(task,$index)">{{task.name}}</a>
+                    </li>
+                </ul>
+            </div>
+            <div style="clear:both"></div>
+
+        </div>
+        <div weight-size="80">
+            <!-- # CE - 任务详细页面 -->
+            <div slimscroll>
+                <p class="p_h1">{{selectedTask.name}}</p>
+
+                <div class="info_t">
+                    <p class="p_p1">
+                        <span>到期日：{{selectedTask.dueDate  | friendtime:'未设置到期日' }}</span>
+                        <span>优先级：中</span>
+                        <span tooltip-placement="bottom" tooltip="{{selectedTask.createTime}}">创建时间：{{selectedTask.createTime  | friendtime:'无创建时间' }}</span>
+                    </p>
+                </div>
+
+                <div class="info_c">
+                    <p class="p_p2">{{selectedTask.description}}</p>
+
+                    <p class="p_p3"><a href="#">编辑</a></p>
+                </div>
+
+                <div class="info_c2" style="display:none;">
+                    <p class="p_p2"><textarea>项目描述项目描...</textarea></p>
+
+                    <p class="p_p3"><a href="#">编辑</a></p>
+                </div>
+                <div class="clear"></div>
+
+
+                <p class="p_h2"><a href="#">添加</a>参与人</p>
+
+                <div class="info_c3">
+                    <p class="p_p4" ng-repeat="identity in selectedTask.identitys">
+                        <span><img src="../../images/user.gif"/></span>
+                        <span>{{identity.type | dict:'50' }}：{{identity.user}}</span>
+                        <span><a href="#">转让</a> <a ng-click="talkTo(identity.user)">对话</a></span>
+                    </p>
+                    <div class="clear"></div>
+                </div>
+
+
+                <p class="p_h2"><a href="#">添加</a>相关内容</p>
+
+                <div class="info_c3">
+                    <p class="p_p5" ng-repeat="attachment in selectedTask.attachments">
+                        <span>{{attachment.name_}}</span>
+                        <a href="{{attachment.url_}}">{{attachment.url_}}</a>
+                    </p>
+                </div>
+
+                <!-- 具体的form元素,selectedTask.form.view为一个变量 -->
+
+                <div ng-include="selectedTask.form.view"></div>
+
+            </div>
+            <!-- / CE - src/main/webapp/app/tasklist/pages/task.html -->
+        </div>
+    </div>
+
+    <!-- 打开的窗口 -->
+</div>

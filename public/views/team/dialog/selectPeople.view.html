@@ -1,0 +1,62 @@
+<div class="modal-header">
+    <h3>选择团队成员</h3>
+</div>
+
+<div class="modal-body">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-blue">
+                <div class="box-title">
+
+                </div>
+                <div class="box-content">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <div class="col-sm-9 col-lg-10 controls">
+                                <div class="row bootstrap-duallistbox-container moveonselect col-md-12">
+                                    <div class="col-md-6 box1">
+                                        <span class="info-container"><span class="info">可选人员</span></span>
+                                        <input placeholder="Filter" class="filter" type="text"/>
+                                        <div class="btn-group buttons">
+                                            <button type="button" class="btn btn-default moveall" title="Move all" ng-click="opers.toRight()" >
+                                                <i class="glyphicon glyphicon-arrow-right"></i><i
+                                                    class="glyphicon glyphicon-arrow-right"></i></button>
+                                            <button type="button" class="btn btn-default move"
+                                                    title="Move selected"><i
+                                                    class="glyphicon glyphicon-arrow-right"></i></button>
+                                        </div>
+                                        <select multiple="multiple"
+                                                name="_helper1" style="height: 102px;" ng-dblclick="opers.toRight()" ng-model="opers.optSelectedMembers" ng-options="m.screen_name_ for m in opers.optMembers">
+                                        </select></div>
+                                    <div class="col-md-6 box2"><span class="info-container"><span class="info">团队人员</span><button
+                                            type="button" class="btn btn-default btn-xs clear2 pull-right">show all
+                                    </button></span><input placeholder="Filter" class="filter" type="text">
+
+                                        <div class="btn-group buttons">
+                                            <button type="button" class="btn btn-default remove"
+                                                    title="Remove selected"><i
+                                                    class="glyphicon glyphicon-arrow-left"></i></button>
+                                            <button type="button" class="btn btn-default removeall"
+                                                    title="Remove all" ng-click="opers.toLeft()"><i
+                                                    class="glyphicon glyphicon-arrow-left"></i><i
+                                                    class="glyphicon glyphicon-arrow-left"></i></button>
+                                        </div>
+                                        <select multiple="multiple" ng-dblclick="opers.toLeft()" ng-model="opers.addSelectedMembers" ng-options="m.screen_name_ for m in opers.addMembers"
+                                                name="_helper2" style="height: 102px;">
+                                        </select></div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn" ng-click="close()"
+            ng-disabled="status === 'PERFORM_SAVE'"
+            ng-hide="status === 'SUCCESS' || status === 'FAIL'">取消</button>
+    <button type="保存" class="btn btn-primary" ng-click="opers.saveSelectedMembers()">保存</button>
+
+</div>

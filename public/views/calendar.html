@@ -1,0 +1,102 @@
+<div role="main">
+    <div class="container" >
+        <section id="directives-calendar" >
+            <div class="well">
+                <div class="row-fluid">
+                    <div class="span8">
+                        <div class="alert-success calAlert" ng-show="alertMessage != undefined && alertMessage != ''">
+                            <h4>{{alertMessage}}</h4>
+                        </div>
+                        <div class="btn-toolbar">
+                            <p class="pull-right lead">我的日程</p>
+
+                            <div class="btn-group">
+                                <button class="btn btn-success" ng-click="changeView('agendaDay', myCalendar)">
+                                    日视图
+                                </button>
+                                <button class="btn btn-success" ng-click="changeView('agendaWeek', myCalendar)">
+                                    周视图
+                                </button>
+                                <button class="btn btn-success" ng-click="changeView('month', myCalendar)">月视图
+                                </button>
+                            </div>
+                        </div>
+                        <div class="calendar" ng-model="eventSources" calendar="myCalendar" config="uiConfig.calendar"
+                             ui-calendar="uiConfig.calendar"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <div ui-dialog="{showModel: 'isDialogShow', dialogId: 'eventDialog', lock: true}" title="新事件"
+         style="display: none;">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box">
+                    <div class="box-content">
+                        <form action="#" class="form-horizontal">
+                            <div class="form-group">
+                                <label class="col-sm-3 col-lg-2 control-label">标题</label>
+                                <div class="col-sm-9 col-lg-10 controls">
+                                    <input type="text" placeholder="请输入标题" class="form-control input-sm" ng-model="currentEvent.title">
+                                    <span class="help-inline">&nbsp;</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 col-lg-2 control-label">描叙</label>
+                                <div class="col-sm-9 col-lg-10 controls">
+                                    <textarea class="form-control" rows="3" ng-model="currentEvent.des"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 col-lg-2 control-label">开始时间</label>
+                                <div class="col-sm-9 col-lg-10 controls">
+                                    <input id="currentEventStart" type='text' class='form-control' wdate-picker='pickerConfig' ng-model="currentEvent.start" />
+                                    <span class="help-inline">选取时间范围</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 col-lg-2 control-label">结束时间</label>
+                                <div class="col-sm-9 col-lg-10 controls">
+                                    <input id="currentEventEnd" type='text' class='form-control' wdate-picker='pickerConfig2' ng-model="currentEvent.end" />
+                                    <span class="help-inline">选取时间范围</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 col-lg-2 control-label">全天</label>
+                                <div class="col-sm-9 col-lg-10 controls">
+                                    <label class="checkbox">
+                                        <input type="checkbox"  ng-model="currentEvent.allDay" />
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 col-lg-2 control-label">颜色</label>
+                                <div class="col-sm-9 col-lg-10 controls">
+                                    <select class="form-control" tabindex="1" ng-model="currentEvent.className">
+                                        <option value="color-red">红</option>
+                                        <option value="Category 2">Category 2</option>
+                                        <option value="Category 3">Category 5</option>
+                                        <option value="Category 4">Category 4</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2">
+                                    <button type="button" class="btn btn-primary" ng-click="saveAddEvent()"><i class="fa fa-check"></i> 保存</button>
+                                    <button type="button" class="btn" ng-click="closeAddEventDialog()">关闭</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

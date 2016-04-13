@@ -1,0 +1,29 @@
+
+<!-- saved from url=(0053)http://i.bhu.edu.cn/dcp/dcp/comm/im/imWeb_groups.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body>
+{#if $T.list.length!=0}
+<div class="wbim_list_friend">
+	{#foreach $T.list as record}
+	<div class="wbim_list_group">
+		<div class="wbim_list_group_tit wbim_close" title="{$T.record.groupName}" name="wbim_list_group" ftype="0">
+			{$T.record.groupName}[<span id="span_num_insert">{$T.record.avNum}</span>]
+		</div>
+		<ul style="display: none;">
+		{#foreach $T.record.res.list as rgitem}
+			<li uid="{$T.rgitem.id_number}" jid="{$T.rgitem.jid}" title="{$T.rgitem.name}" {#if="" $t.rgitem.ava="=false" }="" fx="1" {#else}fx="0" {#="" if}="">
+				<div class="wbim_userhead">
+					<img src="./imWeb_groups_files/{getImgOnError()}" onerror="this.src=&#39;{getImgOnError()}&#39;">
+					<span style="display: none;" class="wbim_icon_msg_s"></span>
+					<span id="wbim_state_fr" {#if="" $t.rgitem.state="=&quot;忙碌&quot;}class=&quot;wbim_status_busy&quot;{#elseif"></span>
+				</div>
+				<div class="wbim_username">
+					{$T.rgitem.name}
+				</div>
+			</li>
+		{#/for}
+		</ul>
+	</div>
+	{#/for}
+</div>
+{#/if}
+</body></html>

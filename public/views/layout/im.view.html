@@ -1,0 +1,226 @@
+<!--放大框 -->
+<div class="wbim_list_expand" style="z-index: 1001; right: 0px; bottom: 0px;" id="wbim_list_expand"
+     ng-show="expandPanel.show">
+    <div class="wbim_list_con">
+        <div class="wbim_tit">
+            <div class="wbim_titin">
+                <div class="wbim_tit_lf" id="wbim_tit_lf">
+                    <div>
+                        <div class="tit" id="tit">
+                            <span class=""></span>
+                            <span class="txt"></span>
+                            <span class="icon"></span>
+                        </div>
+                        <div class="linert"></div>
+                        <ul style="display:none;">
+                            <li class="lingtop"></li>
+                            <li fid="在线">
+                                <a href="javascript:void(0)"><span class="wbim_status_online"></span>在线</a>
+                            </li>
+                            <li fid="忙碌">
+                                <a href="javascript:void(0)"><span class="wbim_status_busy"></span>忙碌</a>
+                            </li>
+                            <li fid="离开">
+                                <a href="javascript:void(0)"><span class="wbim_status_away"></span>离开</a>
+                            </li>
+                            <!--
+                            <li fid="隐身">
+                                <a href="javascript:void(0)"><span
+                                    class="wbim_status_offline"></span>隐身</a>
+                            </li>
+                            -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="wbim_tit_rt">
+                    <a hidefocus="true" title="最小化" class="wbim_icon_mini" id="wbim_icon_mini"
+                       href="javascript:void(0)" ng-click="expandPanel.hiddenPanel()"></a>
+                </div>
+            </div>
+        </div>
+        <div class="wbim_line"></div>
+        <div class="wbim_list_srch">
+            <div class="wbim_list_srchin">
+                <a href="javascript:void(0)" hidefocus="true" style="display: none;" class="wbim_icon_close_s"></a>
+                <input class="margin_left_none" value="搜索在线好友" id="search_name_button" type="text">
+            </div>
+        </div>
+        <div class="wbim_list_box" id="wbim_list_box">
+            <div class="wbim_list_friend" ng-repeat="team in groups">
+                <div class="wbim_list_group">
+                    <div class="wbim_list_group_tit wbim_close" title="{{team.name_}}" name="wbim_list_group"
+                         ftype="0" ng-click="toggleGroup(team.id_)"
+                         ng-class="{'wbim_close':!isGroupShow(team.id_),'wbim_open':isGroupShow(team.id_)}">
+                        {{team.name_}}[<span id="span_num_insert">{{team.avNum}}</span>]
+                    </div>
+                    <ul ng-show="isGroupShow(team.id_)">
+                        <li ng-repeat="member in team.members" uid="{{member.id_}}" title="{{member.screen_name_}}"
+                            ng-click="dialog.openImDialog(member.id_)">
+                            <div class="wbim_userhead">
+                                <img src="./imWeb_groups_files/{getImgOnError()}">
+                                <span style="display: none;" class="wbim_icon_msg_s"></span>
+                                <span id="wbim_state_fr"></span>
+                            </div>
+                            <div class="wbim_username">
+                                {{member.screen_name_}}
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="wbim_list_pos" id="wbim_list_pos" ng-click="expandPanel.hiddenPanel()">
+            <a href="javascript:void(0)" hidefocus="true" class="wbim_clicknone"><span class="wbim_icon_arrd"></span>
+            </a>
+        </div>
+    </div>
+</div>
+<!--聊天框 -->
+<div style="position: absolute; right: 199px; bottom: 0px; z-index: 1001;"
+     class="wbim_chat_box" id="wbim_chat_box" ng-show="dialog.show">
+    <div class="wbim_chat_con">
+        <!-- 对话框标题 -->
+        <div class="wbim_tit">
+            <div class="wbim_titin">
+                <div class="wbim_tit_lf">
+                    <p>
+                        <span class="" id="wbim_tit_lf_state_class"></span>
+						<span class="txt"><a id="wbim_tit_lf_name" title=""
+                                             href="javascript:void(0)">{{dialog.disTitle}}</a>
+						</span>
+                        <span class="bringin" style="display: none"></span>
+                    </p>
+                </div>
+                <div class="wbim_tit_rt">
+                    <a title="最小化" hidefocus="true" id="rt_wbim_icon_mini"
+                       class="wbim_icon_mini" href="javascript:;" ng-click="dialog.toMin()"></a>
+                    <a title="关闭" hidefocus="true" id="rt_wbim_icon_close"
+                       class="wbim_icon_close" href="javascript:;" ng-click="dialog.toClose()"></a>
+                </div>
+            </div>
+        </div>
+        <!-- 对话框左边 -->
+        <div class="wbim_chat_lf">
+            <a id="photo_thumb_top" class="wbim_scrolltop_n"></a>
+
+            <div class="wbim_chat_friend_box">
+                <ul class="wbim_chat_friend_list" id="wbim_chat_friend_list">
+                    <li ng-click="changeChatUser(chatUser.id_)"
+                        ng-class="{'wbim_active':checkCurrentUser(chatUser.id_)}"
+                        ng-repeat="chatUser in chattingUsers" uid="{{chatUser.id_}}" title="{{chatUser.screen_name_}}">
+                        <div class="wbim_userhead"><span
+                                class="wbim_status_online"></span></div>
+                        <div class="wbim_username">{{chatUser.screen_name_}}</div>
+                        <a name="wbim_icon_close" class="wbim_icon_close_s"
+                           href="javascript:void(0)" hidefocus="true"></a></li>
+                </ul>
+            </div>
+            <a id="photo_thumb_down" class="wbim_scrollbtm_n"></a>
+        </div>
+        <!-- 对话框右边 -->
+        <div class="wbim_chat_rt" style="width:314px;">
+            <!--聊天实际内容 -->
+            <div class="wbim_chat_up">
+                <div class="wbim_chat_tips" style="display: none;">
+                    <span class="wbim_icon_tips"></span>
+                    <span>对方当前不在线或隐身，可能无法立即回复。</span>
+                    <a class="wbim_icon_close_s" href="javascript:;" hidefocus="true"></a>
+                </div>
+                <div class="wbim_chat_list" id="wbim_chat_list" scrollif="dialog.scrollIf">
+                    <dl ng-repeat="chatUser in chattingUsers" uid="{{chatUser.id_}}"
+                        ng-show="checkCurrentUser(chatUser.id_)">
+                        <dd class="wbim_msgr" ng-repeat="msg in chatUser.msg">
+                            <div class="wbim_msgpos">
+                                <div class="msg_time" fv="1">{{msg.send_time_}}</div>
+                                <div class="msg_box">
+                                    <p class='txt' ng-repeat="subMsg in msg.ptext_">{{subMsg}}</p>
+                                    </div>
+                                <div class="msg_arr"></div>
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            <!--聊天中间的工具栏 -->
+            <div class="wbim_chat_toolbar">
+                <div class="wbim_chat_toolbarin">
+                    <div class="wbim_face">
+                        <a href="javascript:;" hidefocus="true" id="wbim_icon_face"
+                           title="普通表情" class="wbim_icon_face"></a>
+                    </div>
+                    <a href="javascript:void(0)" id="wbim_icon_chatdoc" title="聊天记录" class="wbim_history"><span
+                            class="wbim_icon_chatdoc"></span>聊天记录</a>
+                </div>
+            </div>
+            <!--聊天输入 -->
+            <div style="margin-top: 1px;" class="wbim_chat_input">
+                <div class="wbim_chat_input_tips" style="display: none;">
+                    <div class="fl"></div>
+                    <div class="fr"></div>
+                </div>
+                <textarea id="wbim_chat_input_ta" ng-model="dialog.chatInputMessage"></textarea>
+            </div>
+            <!--聊天尾部的工具栏 -->
+            <div class="wbim_chat_btm">
+                <div class="wbim_chat_btmin">
+                    <div class="wbim_chat_btm_rt">
+                        <p class="wbim_tips_char">
+                            <span id="atra_num">0</span>
+                            <span>/1000</span>
+                        </p>
+
+                        <div class="wbim_btn_send">
+                            <input id="input_btn_send" class="input_btn right" value="发送" type="button"
+                                   ng-click="dialog.sendMessage()">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="left: 130px; z-index: 100; top: 150px; position: absolute; display: none;">
+        <div class="wbim_confirm_box">
+            <div class="wbim_confirm_con">
+                <div class="wbim_confirm_info">
+                    <p class="wbim_confirm_p">
+                        <span class="wbim_icon_ask"></span><span class="txt">提示：关闭会话窗口后，其中的未读私信将不再重复提醒。</span>
+                    </p>
+
+                    <p class="wbim_confirm_btn">
+                        <a class="wbim_btn_c" href="javascript:;"><em>确认</em>
+                        </a><a class="wbim_btn_n" href="javascript:;"><em>取消</em>
+                    </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="wbim_box_pop"
+             style="position: absolute; width: 420px; height: 365px; top: -126px; left: -130px;"></div>
+    </div>
+</div>
+<!--缩小的框 -->
+<div ng-class="{'wbim_min_box_col3':dialog.minShow,'wbim_min_box_col2':dialog.minCssCol2}"
+     style="position: absolute; bottom: 0px; right: 0px;" id="wbim_min_box_col_change">
+    <div class="wbim_min_box">
+        <!--   缩小的朋友列表 -->
+        <div class="wbim_min_friend" id="wbim_min_friend" ng-click="miniPanel.toMax()"
+             ng-mouseenter="miniPanel.hoverShow = true" ng-mouseleave="miniPanel.hoverShow = false"
+             ng-class="{'wbim_min_box_hover':miniPanel.hoverShow}">
+            <p class="statusbox">
+                <span class=""></span>
+            </p>
+            聊天(<span class="wbim_online_count" id="wbim_online_count"></span>)
+        </div>
+        <div class="wbim_min_line wbim_min_linefor3"></div>
+        <!--   缩小的聊天 -->
+        <div class="wbim_min_chat" id="wbim_min_chat" ng-show="dialog.minShow"
+             ng-class="{'wbim_min_chat_msg':(!dialog.minShow)}" ng-click="dialog.toMax()">
+            <span class="wbim_icon_msg"></span>
+            <span class="wbim_min_text_pre" style="display:inline;" id="wbim_min_text_pre">正与 </span>
+            <span class="wbim_min_nick" id="span_wbim_min_nick">{{dialog.disTitle}}</span>
+            <span class="line"></span>
+            <span class="wbim_min_text" id="wbim_min_text">聊天中</span>
+        </div>
+    </div>
+</div>
+<div id="shortcut_div" style="display:none"></div>

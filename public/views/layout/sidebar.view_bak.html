@@ -1,0 +1,89 @@
+<ul class="nav nav-list" style="height: auto;" ng-controller="MainCtrl">
+    <li>
+        <form target="#" method="GET" class="search-form">
+<span class="search-pan">
+<button type="submit">
+    <i class="fa fa-search"></i>
+</button>
+<input type="text" name="search" placeholder="Search ..." autocomplete="off">
+</span>
+        </form>
+    </li>
+    <li ng-class="{true: 'active', false: ''}[tabs[''].isActive]">
+        <a ng-click="goUrl('')">
+            <i class="fa fa-dashboard"></i>
+            <span>我的工作台</span>
+        </a>
+    </li>
+
+    <li ng-class="{true: 'active', false: ''}[tabs.project.isActive]">
+        <a  ng-click="goUrl('project')">
+            <i class="fa fa-desktop"></i>
+            <span>项目管理</span>
+        </a>
+    </li>
+    <li ng-class="{true: 'active', false: ''}[tabs.tasks.isActive]">
+        <a href="#" class="dropdown-toggle">
+            <i class="fa fa-edit"></i>
+            <span>任务管理</span>
+            <b class="arrow fa fa-angle-right"></b>
+        </a>
+        <ul class="submenu">
+            <li><a ng-click="goUrl('tasks')">代办任务</a></li>
+            <li ><a ng-click="goUrl('tasks')">我的任务</a></li>
+            <li ><a ng-click="goUrl('tasks')">团队任务</a></li>
+            <li><a ng-click="goUrl('tasks')">历史任务</a></li>
+        </ul>
+    </li>
+    <li ng-class="{true: 'active', false: ''}[tabs.team.isActive]">
+        <a ng-click="goUrl('team')">
+            <i class="fa fa-list"></i>
+            <span>团队管理</span>
+        </a>
+    </li>
+    <li ng-class="{true: 'active', false: ''}[tabs.kanban.isActive]">
+        <a ng-click="goUrl('kanban')">
+            <i class="fa fa-list"></i>
+            <span>看板</span>
+        </a>
+    </li>
+    <li ng-class="{true: 'active', false: ''}[tabs.crowdsourcing.isActive]">
+        <a  ng-click="goUrl('crowdsourcing')">
+            <i class="fa fa-desktop"></i>
+            <span>外包管理</span>
+        </a>
+    </li>
+    <li ng-class="{true: 'active', false: ''}[tabs.social.isActive]">
+        <a  ng-click="goUrl('social')">
+            <i class="fa fa-desktop"></i>
+            <span>社交管理</span>
+        </a>
+    </li>
+    <li ng-class="{true: 'active', false: ''}[tabs.calendar.isActive]">
+        <a ng-click="goUrl('calendar')">
+            <i class="fa fa-calendar"></i>
+            <span>日程管理</span>
+        </a>
+    </li>
+    <li>
+        <a href="#" class="dropdown-toggle">
+            <i class="fa fa-file"></i>
+            <span>其他</span>
+            <b class="arrow fa fa-angle-right"></b>
+        </a>
+        <ul class="submenu">
+            <li><a href="#/more_blank.html">Blank Page</a></li>
+            <li><a href="#/more_full-width.html">Full Width Page</a></li>
+            <li><span>Errors</span>
+                <ul>
+                    <li><a href="#/more_error-404.html">Error 404</a></li>
+                    <li><a href="#/more_error-500.html">Error 500</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+<div id="sidebar-collapse" class="visible-lg">
+    <i class="fa fa-angle-double-left"></i>
+</div>
+<script src="scripts/lib/flaty.js"></script>

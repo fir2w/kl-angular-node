@@ -1,0 +1,39 @@
+<div class="login-page">
+    <div class="login-wrapper">
+        <form id="form-login" ng-submit="submitLogin(user)" method="post" method="post">
+            <h3>登录到您的帐户</h3>
+            <hr>
+            <div class="form-group">
+                <div class="controls">
+                    <input placeholder="登录名 or Email" name="email" class="form-control" type="text" ng-model="user.email" value="user1@126.com">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="controls">
+                    <input placeholder="密码" name="password" class="form-control" type="password"  ng-model="user.password" value="123456">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="controls">
+                    <label class="checkbox">
+                        <input value="remember" type="checkbox"> 下次自动登录
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="controls">
+                    <input type="hidden" name="_csrf" value="<%=_csrf%>"/>
+                    <button type="submit" class="btn btn-primary form-control">登录</button>
+                </div>
+            </div>
+            <hr>
+            <p class="clearfix">
+                <a href="#/forgot" class="goto-forgot pull-left">忘记密码?</a>
+                <a href="#/register" class="goto-register pull-right">现在注册</a>
+            </p>
+            <p class="clearfix">
+                <a href="/auth/weibo" class="goto-forgot pull-left">新浪登录</a>
+            </p>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,80 @@
+{
+  "port": 8070,
+  "database": {
+    "dev": {
+      "host": "localhost",
+      "database": "mydb2",
+      "username":"test",
+      "password":"goodluck"
+    },
+    "test": {
+      "host": "localhost",
+      "database": "klwork",
+      "username":"test",
+      "password":"goodluck"
+    },
+    "production": {
+      "host": "localhost",
+      "database": "klwork"
+    }
+  },
+  "view engines": {
+    "js": {
+      "module": "adaro",
+      "settings": {
+        "helpers": null,
+        "stream": false
+      }
+    },
+    "dust": {
+      "module": "adaro",
+      "settings": {
+        "helpers": null,
+        "stream": false
+      }
+    }
+  },
+  "express": {
+    "x-powered-by": false,
+    "jsonp callback name": null,
+    "json replacer": null,
+    "json spaces": 0,
+    "case sensitive routing": false,
+    "strict routing": false,
+    "view cache": false,
+    "view engine": "html",
+    "views": "path:./public"
+  },
+
+  "social": {
+    "sina": {
+      "clientID": "2319800903",
+      "clientSecret": "9eca4bb4acfbc2b69e1a97329fc08d99",
+      "callbackURL": "http://klwork.com/ks/user/weibo-login"
+    },
+
+    "qq": {
+      "clientID": "801392900",
+      "clientSecret": "fff2f0a219dea0243fb4863b16ce586d",
+      "callbackURL": "http://klwork.com/ks/user/qq-login"
+    }
+  },
+  "loggers": {
+    "file": {
+      "path": "logs/klwork.log",
+      "enabled": true,
+      "maxFiles": 6,
+      "maxSize": 102400,
+      "level": "info"
+    },
+    "console": {
+      "enabled": true,
+      "level": "trace"
+    }
+  },
+
+  "task":{
+    "urlPath":"http://localhost:8080/activiti-rest/service"
+  }
+
+}

@@ -1,0 +1,37 @@
+{
+  "middleware": {
+    "static": {//static默认为.build,src为源目录
+      "srcRoot": "./public"
+    },
+    "appsec": {
+      "csrf": false,
+      "csp": false,
+      "p3p": false,
+      "xframe": "SAMEORIGIN"
+    },
+
+    "session": {
+      "module": "memory",
+      "secret": "1dc7bd77d6f4c695f1841ed370b78b985999f13f",
+      "cookie": {
+        "secure": false,
+        "maxAge": 300000
+      }
+    }
+//
+//      "compiler": {
+//          "dust": "templates",
+//          "less": "css"
+//      },
+//
+//      "session": {
+//          "module": "memory",
+//          "secret": "1dc7bd77d6f4c695f1841ed370b78b985999f13f"
+//      },
+//
+//      "static": {
+//          "srcRoot": "path:./public",
+//          "rootPath": "path:./.build"
+//      }
+  }
+}

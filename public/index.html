@@ -1,0 +1,116 @@
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="bower_components/bootstrap-css/css/bootstrap.css">
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+    <!-- endbuild -->
+
+    <!-- build:css(.tmp) styles/other.css -->
+    <link rel="stylesheet" href="bower_components/fullcalendar/fullcalendar.css">
+    <link rel="stylesheet" href="third-lib/pnotify/jquery.pnotify.default.css" />
+    <link rel="stylesheet" href="third-lib/ui-layout/ui-layout.css">
+    <link rel="stylesheet" href="third-lib/treetable/css/jquery.treegrid.css">
+    <link rel="stylesheet" href="third-lib/pikaday/pikaday.css">
+
+
+
+    <link rel="stylesheet" href="styles/flaty/flaty.css">
+    <link rel="stylesheet" href="styles/flaty/flaty-responsive.css">
+    <link rel="stylesheet" href="styles/flaty/chosen.css">
+    <link rel="stylesheet" href="styles/jqstooltip.css">
+    <link rel="stylesheet" href="styles/dialog.css">
+    <link rel="stylesheet" href="styles/todolist.css">
+    <link rel="stylesheet" href="styles/kanban.css">
+    <link rel="stylesheet" href="styles/dialog/iblue.css">
+    <link rel="stylesheet" href="styles/webim/webim.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/task.css">
+
+    <!-- endbuild -->
+</head>
+<body >
+<!--[if lt IE 9]>
+<script src="bower_components/es5-shim/es5-shim.js"></script>
+<script src="bower_components/json3/lib/json3.min.js"></script>
+<![endif]-->
+
+<div id="all" ng-controller="MainCtrl" style="width:100%;overflow:hidden;">
+    <!-- 导航条 -->
+    <div id="navbar" class="navbar" ng-include="'views/layout/nav.view.html'" ng-controller="NavBarCtrl">
+    </div>
+    <!-- 下面的主体容器 -->
+    <div class="container" id="main-container" style="width:100%;overflow:hidden;">
+
+        <div ng-show="sidebarShow">
+            <!-- 菜单 -->
+            <sidebar>
+                <ul class="nav nav-list" style="height: auto;">
+                    <li>
+                        <form target="#" method="GET" class="search-form">
+                        <span class="search-pan">
+                    <button type="submit">
+
+                        <i class="fa fa-search"></i>
+                    </button>
+                    <input type="text" name="search" placeholder="Search ..." autocomplete="off">
+                    </span>
+                        </form>
+                    </li>
+                    <menu ng-repeat="menu in menus" menu-name="menu.menuName" is-active="menu.isActive" sign="menu.sign"
+                          speical-style="menu.speicalStyle"/>
+                </ul>
+            </sidebar>
+        </div>
+        <div id="main-content">
+            <!-- 应用程序内容变化区 -->
+            <div id="view-content" ng-view="">
+            </div>
+            <a id="btn-scrollup" class="btn btn-circle btn-lg" href="#"><i class="fa fa-chevron-up"></i></a>
+            <footer>
+                <p>2014 © KLWORK.</p>
+            </footer>
+        </div>
+    </div>
+
+    <!-- 浮动条-->
+    <div id="flotTip" style="display: none; position: absolute;"></div>
+
+    <!-- 聊天框显示 -->
+    <div id="wbim_box" class="wbim_box" style="position: fixed; bottom: 0px; right: 20px;"
+         ng-include="'views/layout/im.view.html'" ng-controller="ImCtrl"></div>
+
+
+
+</div>
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+<script>
+</script>
+
+<!-- build:js scripts/lib.js -->
+<script src="/socket.io/socket.io.js"></script>
+<script src="bower_components/requirejs/require.js"></script>
+<script src="main.js"></script>
+
+<!-- endbuild -->
+
+<!-- build:js scripts/plugins.js -->
+
+
+<!-- endbuild -->
+

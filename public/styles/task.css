@@ -1,0 +1,143 @@
+.task-detail .p_h1 {
+  background: url(../../images/clock.png) no-repeat 0 center;
+  line-height: 30px;
+  height: 30px;
+  color: #333;
+  font-family: Microsoft YaHei;
+  padding-left: 33px;
+  font-size: 16px;
+  margin-top: 20px;
+}
+.task-detail .info_t {
+  height: 30px;
+  line-height: 30px;
+  color: #999;
+  border-bottom: 1px solid #ccc;
+}
+.task-detail .p_p1 {
+  float: left;
+}
+.task-detail .p_p1 span {
+  padding-right: 15px;
+}
+.task-detail .p_p2 {
+  width: 100%;
+  padding-top: 10px;
+  line-height: 24px;
+}
+.task-detail .p_p3 a {
+  margin-top: 10px;
+  display: block;
+  width: 73px;
+  height: 23px;
+  line-height: 23px;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  background: #15b64e;
+}
+.task-detail .p_p2 textarea {
+  width: 100%;
+  height: 120px;
+  border: 1px solid #f2f2f2;
+  padding: 5px;
+}
+.task-detail .p_h2 {
+  border-bottom: 1px solid #ccc;
+  height: 30px;
+  line-height: 30px;
+  font-size: 16px;
+  font-family: Microsoft YaHei;
+  margin-top: 20px;
+}
+.task-detail .p_h2 a {
+  display: block;
+  float: right;
+  width: 73px;
+  height: 23px;
+  line-height: 23px;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  background: #15b64e;
+  font-size: 12px;
+  font-family: Verdana, Geneva, sans-serif;
+}
+.task-detail .info_c3 {
+  padding: 20px 0px;
+  color: #666;
+}
+.task-detail .p_p4 {
+  float: left;
+  width: 30%;
+  margin-right: 3%;
+  padding-bottom: 20px;
+}
+.task-detail .p_p4 span {
+  display: block;
+  float: left;
+  line-height: 28px;
+  padding-right: 10px;
+  color: #666;
+}
+.task-detail .p_p4 span a {
+  display: block;
+  width: 73px;
+  height: 23px;
+  line-height: 23px;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  background: #ccc;
+  font-size: 12px;
+}
+.task-detail .p_p4 span a:hover {
+  background: #15b64e;
+}
+.task-detail .info_c4 {
+  width: 100%;
+  background: #f2f2f2;
+  color: #666;
+}
+.task-detail .p_p6 {
+  padding: 20px;
+  font-weight: bold;
+}
+.task-detail .p_p7 {
+  clear: both;
+  margin-top: 10px;
+}
+.task-detail .p_p7 span {
+  display: block;
+  float: left;
+  height: 25px;
+  line-height: 25px;
+  width: 100px;
+  text-align: right;
+}
+.task-detail .text1 {
+  width: 200px;
+  height: 23px;
+  border: 1px solid #ccc;
+  padding: 0 5px;
+}
+.task-detail .info_color1 {
+  color: #f00;
+  padding-right: 10px;
+}
+.task-detail .p_p8 {
+  padding: 20px 0px 20px 100px;
+  height: 30px;
+}
+.task-detail .p_p8 a {
+  display: block;
+  float: left;
+  height: 25px;
+  line-height: 25px;
+  padding: 0 20px;
+  font-size: 12px;
+  background: #15b64e;
+  margin-right: 20px;
+  color: #fff;
+  text-decoration: none;
+}

@@ -1,0 +1,175 @@
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body>
+<div class="wbim_list_expand" style="z-index: 1001; right: 0px; bottom: 0px;display:none" id="wbim_list_expand">
+    <div class="wbim_list_con">
+        <div class="wbim_tit">
+            <div class="wbim_titin">
+                <div class="wbim_tit_lf" id="wbim_tit_lf">
+                    <div node-type="status_manager">
+                        <div class="tit" id="tit">
+                            <span class=""></span>
+                            <span class="txt"></span>
+                            <span class="icon"></span>
+                        </div>
+                        <div class="linert"></div>
+                        <ul style="display:none;">
+                            <li class="lingtop"></li>
+                            <li fid="在线">
+                                <a href="javascript:void(0)"><span class="wbim_status_online"></span>在线</a>
+                            </li>
+                            <li fid="忙碌">
+                                <a href="javascript:void(0)"><span class="wbim_status_busy"></span>忙碌</a>
+                            </li>
+                            <li fid="离开">
+                                <a href="javascript:void(0)"><span class="wbim_status_away"></span>离开</a>
+                            </li>
+                            <!--
+                            <li fid="隐身">
+                                <a href="javascript:void(0)"><span
+                                    class="wbim_status_offline"></span>隐身</a>
+                            </li>
+                            -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="wbim_tit_rt">
+                    <a hidefocus="true" title="最小化" class="wbim_icon_mini" id="wbim_icon_mini"
+                       href="javascript:void(0)"></a>
+                </div>
+            </div>
+        </div>
+        <div class="wbim_line"></div>
+        <div class="wbim_list_srch">
+            <div class="wbim_list_srchin">
+                <a href="javascript:void(0)" hidefocus="true" style="display: none;" class="wbim_icon_close_s"></a>
+                <input class="margin_left_none" value="搜索在线好友" id="search_name_button" type="text">
+            </div>
+        </div>
+        <div class="wbim_list_box" id="wbim_list_box">
+        </div>
+        <div class="wbim_list_pos" id="wbim_list_pos">
+            <a href="javascript:void(0)" hidefocus="true" class="wbim_clicknone"><span class="wbim_icon_arrd"></span>
+            </a>
+        </div>
+    </div>
+</div>
+<div node-type="wbim_chat_box" style="position: absolute; right: 199px; bottom: 0px; z-index: 1001;display:none"
+     class="wbim_chat_box" id="wbim_chat_box">
+    <div node-type="wbim_chat_con" class="wbim_chat_con">
+        <div node-type="wbim_tit" class="wbim_tit">
+            <div node-type="wbim_titin" class="wbim_titin">
+                <div class="wbim_tit_lf">
+                    <p>
+                        <span node-type="wbim_status" class="" id="wbim_tit_lf_state_class"></span>
+						<span class="txt"><a node-type="wbim_tit_lf_name" id="wbim_tit_lf_name" title=""
+                                             href="javascript:void(0)"></a>
+						</span>
+                        <span node-type="wbim_tit_lf_count" class="bringin" style="display: none"></span>
+                    </p>
+                </div>
+                <div class="wbim_tit_rt">
+                    <a node-type="wbim_icon_mini" title="最小化" hidefocus="true" id="rt_wbim_icon_mini"
+                       class="wbim_icon_mini" href="javascript:;"></a>
+                    <a node-type="wbim_icon_close" title="关闭" hidefocus="true" id="rt_wbim_icon_close"
+                       class="wbim_icon_close" href="javascript:;"></a>
+                </div>
+            </div>
+        </div>
+        <div node-type="wbim_chat_lf" class="wbim_chat_lf">
+            <a id="photo_thumb_top" class="wbim_scrolltop_n"></a>
+
+            <div class="wbim_chat_friend_box">
+                <ul node-type="wbim_chat_friend_list" class="wbim_chat_friend_list" id="wbim_chat_friend_list">
+                </ul>
+            </div>
+            <a id="photo_thumb_down" class="wbim_scrollbtm_n"></a>
+        </div>
+        <div class="wbim_chat_rt">
+            <div class="wbim_chat_up">
+                <div node-type="wbim_chat_tips" class="wbim_chat_tips" style="display: none;">
+                    <span class="wbim_icon_tips"></span>
+                    <span node-type="wbim_chat_tips_content">对方当前不在线或隐身，可能无法立即回复。</span>
+                    <a class="wbim_icon_close_s" node-type="wbim_icon_close_s" href="javascript:;" hidefocus="true"></a>
+                </div>
+                <div class="wbim_chat_list" id="wbim_chat_list">
+
+                </div>
+            </div>
+            <div node-type="wbim_chat_toolbar" class="wbim_chat_toolbar">
+                <div node-type="wbim_chat_toolbarin" class="wbim_chat_toolbarin">
+                    <div node-type="wbim_face" class="wbim_face">
+                        <a href="javascript:;" hidefocus="true" node-type="wbim_icon_face" id="wbim_icon_face"
+                           title="普通表情" class="wbim_icon_face"></a>
+                    </div>
+                    <a href="javascript:void(0)" id="wbim_icon_chatdoc" title="聊天记录" class="wbim_history"><span
+                            class="wbim_icon_chatdoc"></span>聊天记录</a>
+                </div>
+            </div>
+            <div style="margin-top: 1px;" node-type="wbim_chat_input" class="wbim_chat_input">
+                <div node-type="root" class="wbim_chat_input_tips" style="display: none;">
+                    <div node-type="fl" class="fl"></div>
+                    <div node-type="fr" class="fr"></div>
+                </div>
+                <textarea id="wbim_chat_input_ta"></textarea>
+            </div>
+            <div node-type="wbim_chat_btm" class="wbim_chat_btm">
+                <div class="wbim_chat_btmin">
+                    <div class="wbim_chat_btm_rt">
+                        <p class="wbim_tips_char">
+                            <span id="atra_num">0</span>
+                            <span>/1000</span>
+                        </p>
+
+                        <div node-type="wbim_btn_send" class="wbim_btn_send">
+                            <input id="input_btn_send" class="input_btn right" value="发送" type="button">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div node-type="wbim_confirm_box" style="left: 130px; z-index: 100; top: 150px; position: absolute; display: none;">
+        <div class="wbim_confirm_box">
+            <div class="wbim_confirm_con">
+                <div class="wbim_confirm_info">
+                    <p class="wbim_confirm_p">
+                        <span class="wbim_icon_ask"></span><span class="txt">提示：关闭会话窗口后，其中的未读私信将不再重复提醒。</span>
+                    </p>
+
+                    <p class="wbim_confirm_btn">
+                        <a node-type="wbim_btn_c" class="wbim_btn_c" href="javascript:;"><em>确认</em>
+                        </a><a node-type="wbim_btn_n" class="wbim_btn_n" href="javascript:;"><em>取消</em>
+                    </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div node-type="wbim_box_pop" class="wbim_box_pop"
+             style="position: absolute; width: 420px; height: 365px; top: -126px; left: -130px;"></div>
+    </div>
+</div>
+<div class="wbim_min_box_col2" style="position: absolute; bottom: 0px; right: 0px;" id="wbim_min_box_col_change">
+    <div class="wbim_min_box">
+        <div class="wbim_min_friend" id="wbim_min_friend">
+            <p class="statusbox">
+                <span class=""></span>
+            </p>
+            聊天(<span class="wbim_online_count" id="wbim_online_count"></span>)
+        </div>
+        <div class="wbim_min_line wbim_min_linefor3"></div>
+        <div class="wbim_min_chat" id="wbim_min_chat" style="display:none">
+            <span class="wbim_icon_msg"></span>
+            <span class="wbim_min_text_pre" style="display:inline;" id="wbim_min_text_pre">正与 </span>
+            <span class="wbim_min_nick" id="span_wbim_min_nick"></span>
+            <span class="line"></span>
+            <span class="wbim_min_text" id="wbim_min_text">聊天中</span>
+        </div>
+    </div>
+</div>
+
+<div id="shortcut_div" style="display:none"></div>
+</body>
+</html>

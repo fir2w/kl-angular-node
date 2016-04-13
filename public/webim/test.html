@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Dashboard - FLATY Admin</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./webim.css">
+</head>
+
+<body>
+<div id="WB_webim" class="WB_webim" style="position: fixed; bottom: 0px; right: 0px;">
+    <div id="webim_swf_box"
+         style="position: absolute; bottom: 2px; right: 2px; z-index: 1001; width: 1px; height: 1px;">
+    </div>
+    <div class="webim_list WBIM_fold" node-type="minRoot"
+         style="right: 0px; z-index: 9000; bottom: 0px; opacity: 1; visibility: visible;">
+        <div class="webim_list_wrap ">
+            <div class="webim_list_header clearfix" node-type="webim_min_stateArea">
+                <div node-type="stateContainer" class="webim_state" style="cursor: pointer;" title="切换状态"><p
+                        class="user_state"><i node-type="statusNode" class="WBIM_icon_offline"></i></p></div>
+                <div node-type="stateSetting" class="layer_setting"
+                     style="display: none; top: 18px; right: 35px; z-index: 1500; visibility: hidden;">
+                    <ul class="setting_list">
+                        <li title="切换为在线状态" action-type="stateLi" action-data="status=online"><a
+                                href="javascript:void(0);" class="setting_cho"><em
+                                class="W_chat_stat W_chat_stat_online"></em><span class="setting_txt">在线</span></a></li>
+                        <li title="切换为隐身状态" action-type="stateLi" action-data="status=hide"><a
+                                href="javascript:void(0);" class="setting_cho"><em
+                                class="W_chat_stat W_chat_stat_offline"></em><span class="setting_txt">隐身</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="state_search_btn" node-type="searchBtn"><a href="#" class="WBIM_icon_search_b"></a></div>
+            <div class="webim_list_main clearfix" node-type="minMain"
+                 style="overflow: hidden; position: relative; height: 293px;">
+                <div class="list_box clearfix">
+                    <div class="list_content">
+                        <ul class="list_content_li" node-type="recentsContainer">
+                            <li class="clearfix" node-type="root" action-type="userItem"
+                                action-data="uid=2813452750&amp;from=min">
+                                <div class="webim_list_head webim_head_30"><span class="head_pic"><img
+                                        class="webim_user_item_img"
+                                        src="http://tp3.sinaimg.cn/2813452750/30/5671240198/1" width="30" height="30"
+                                        node-type="headPicImg" alt=""></span><span node-type="statusNode"
+                                                                                   class="W_chat_stat W_chat_stat_offline"></span><span
+                                        node-type="resourceNode"
+                                        class="WBIM_icon_dev WBIM_icon_#{resource}"></span><span node-type="newMsgIcon"
+                                                                                                 class="WBIM_icon_new"></span>
+                                </div>
+                            </li>
+                            <li class="clearfix" node-type="root" action-type="userItem"
+                                action-data="uid=1642909335&amp;from=min">
+                                <div class="webim_list_head webim_head_30"><span class="head_pic"><img
+                                        class="webim_user_item_img"
+                                        src="http://tp4.sinaimg.cn/1642909335/30/22867541466/2" width="30" height="30"
+                                        node-type="headPicImg" alt=""></span><span node-type="statusNode"
+                                                                                   class="W_chat_stat W_chat_stat_offline"></span><span
+                                        node-type="resourceNode"
+                                        class="WBIM_icon_dev WBIM_icon_#{resource}"></span><span node-type="newMsgIcon"
+                                                                                                 class="WBIM_icon_new"></span>
+                                </div>
+                            </li>
+                            <li class="clearfix" node-type="root" action-type="userItem"
+                                action-data="uid=2456092233&amp;from=min">
+                                <div class="webim_list_head webim_head_30"><span class="head_pic"><img
+                                        class="webim_user_item_img"
+                                        src="http://tp2.sinaimg.cn/2456092233/30/5676688873/2" width="30" height="30"
+                                        node-type="headPicImg" alt=""></span><span node-type="statusNode"
+                                                                                   class="W_chat_stat W_chat_stat_offline"></span><span
+                                        node-type="resourceNode"
+                                        class="WBIM_icon_dev WBIM_icon_#{resource}"></span><span node-type="newMsgIcon"
+                                                                                                 class="WBIM_icon_new"></span>
+                                </div>
+                            </li>
+                            <li class="clearfix" node-type="root" action-type="userItem"
+                                action-data="uid=2282929711&amp;from=min">
+                                <div class="webim_list_head webim_head_30"><span class="head_pic"><img
+                                        class="webim_user_item_img"
+                                        src="http://tp4.sinaimg.cn/2282929711/30/22841713158/1" width="30" height="30"
+                                        node-type="headPicImg" alt=""></span><span node-type="statusNode"
+                                                                                   class="W_chat_stat W_chat_stat_offline"></span><span
+                                        node-type="resourceNode"
+                                        class="WBIM_icon_dev WBIM_icon_#{resource}"></span><span node-type="newMsgIcon"
+                                                                                                 class="WBIM_icon_new"></span>
+                                </div>
+                            </li>
+                            <li class="clearfix" node-type="root" action-type="userItem"
+                                action-data="uid=1796469287&amp;from=min">
+                                <div class="webim_list_head webim_head_30"><span class="head_pic"><img
+                                        class="webim_user_item_img"
+                                        src="http://tp4.sinaimg.cn/1796469287/30/5661735377/2" width="30" height="30"
+                                        node-type="headPicImg" alt=""></span><span node-type="statusNode"
+                                                                                   class="W_chat_stat W_chat_stat_offline"></span><span
+                                        node-type="resourceNode"
+                                        class="WBIM_icon_dev WBIM_icon_#{resource}"></span><span node-type="newMsgIcon"
+                                                                                                 class="WBIM_icon_new"></span>
+                                </div>
+                            </li>
+                            <li class="clearfix" node-type="root" action-type="userItem"
+                                action-data="uid=2470126784&amp;from=min">
+                                <div class="webim_list_head webim_head_30"><span class="head_pic"><img
+                                        class="webim_user_item_img"
+                                        src="http://tp1.sinaimg.cn/2470126784/30/5622899378/2" width="30" height="30"
+                                        node-type="headPicImg" alt=""></span><span node-type="statusNode"
+                                                                                   class="W_chat_stat W_chat_stat_offline"></span><span
+                                        node-type="resourceNode"
+                                        class="WBIM_icon_dev WBIM_icon_#{resource}"></span><span node-type="newMsgIcon"
+                                                                                                 class="WBIM_icon_new"></span>
+                                </div>
+                            </li>
+                            <li class="clearfix" node-type="root" action-type="userItem"
+                                action-data="uid=2039455783&amp;from=min">
+                                <div class="webim_list_head webim_head_30"><span class="head_pic"><img
+                                        class="webim_user_item_img"
+                                        src="http://tp4.sinaimg.cn/2039455783/30/5612171354/1" width="30" height="30"
+                                        node-type="headPicImg" alt=""></span><span node-type="statusNode"
+                                                                                   class="W_chat_stat W_chat_stat_online"></span><span
+                                        node-type="resourceNode" class="WBIM_icon_dev WBIM_icon_web_v4"></span><span
+                                        node-type="newMsgIcon" class="WBIM_icon_new"></span></div>
+                            </li>
+                            <li class="clearfix" node-type="root" action-type="userItem"
+                                action-data="uid=2016713117&amp;from=min">
+                                <div class="webim_list_head webim_head_30"><span class="head_pic"><img
+                                        class="webim_user_item_img"
+                                        src="http://tp2.sinaimg.cn/2016713117/30/22867617916/2" width="30" height="30"
+                                        node-type="headPicImg" alt=""></span><span node-type="statusNode"
+                                                                                   class="W_chat_stat W_chat_stat_online"></span><span
+                                        node-type="resourceNode"
+                                        class="WBIM_icon_dev WBIM_icon_desk_online"></span><span node-type="newMsgIcon"
+                                                                                                 class="WBIM_icon_new"></span>
+                                </div>
+                            </li>
+                            <li class="clearfix" node-type="root" action-type="userItem"
+                                action-data="uid=2689675963&amp;from=min">
+                                <div class="webim_list_head webim_head_30"><span class="head_pic"><img
+                                        class="webim_user_item_img"
+                                        src="http://tp4.sinaimg.cn/2689675963/30/39999296745/1" width="30" height="30"
+                                        node-type="headPicImg" alt=""></span><span node-type="statusNode"
+                                                                                   class="W_chat_stat W_chat_stat_offline"></span><span
+                                        node-type="resourceNode"
+                                        class="WBIM_icon_dev WBIM_icon_#{resource}"></span><span node-type="newMsgIcon"
+                                                                                                 class="WBIM_icon_new"></span>
+                                </div>
+                            </li>
+                            <li class="clearfix" node-type="root" action-type="userItem"
+                                action-data="uid=1180828183&amp;from=min">
+                                <div class="webim_list_head webim_head_30"><span class="head_pic"><img
+                                        class="webim_user_item_img"
+                                        src="http://tp4.sinaimg.cn/1180828183/30/22829093976/1" width="30" height="30"
+                                        node-type="headPicImg" alt=""></span><span node-type="statusNode"
+                                                                                   class="W_chat_stat W_chat_stat_offline"></span><span
+                                        node-type="resourceNode"
+                                        class="WBIM_icon_dev WBIM_icon_#{resource}"></span><span node-type="newMsgIcon"
+                                                                                                 class="WBIM_icon_new"></span>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="list_content_li" node-type="onlinesContainer"></ul>
+                        <ul class="list_content_li" node-type="offlinesContainer">
+                            <li class="clearfix" node-type="root" action-type="userItem"
+                                action-data="uid=1997509257&amp;from=min">
+                                <div class="webim_list_head webim_head_30"><span class="head_pic"><img
+                                        class="webim_user_item_img"
+                                        src="http://tp2.sinaimg.cn/1997509257/30/5605519229/1" width="30" height="30"
+                                        node-type="headPicImg" alt=""></span><span node-type="statusNode"
+                                                                                   class="W_chat_stat W_chat_stat_offline"></span><span
+                                        node-type="resourceNode"
+                                        class="WBIM_icon_dev WBIM_icon_#{resource}"></span><span node-type="newMsgIcon"
+                                                                                                 class="WBIM_icon_new"></span>
+                                </div>
+                            </li>
+                            <li class="clearfix" node-type="root" action-type="userItem"
+                                action-data="uid=1096828023&amp;from=min">
+                                <div class="webim_list_head webim_head_30"><span class="head_pic"><img
+                                        class="webim_user_item_img"
+                                        src="http://tp4.sinaimg.cn/1096828023/30/40008775123/1" width="30" height="30"
+                                        node-type="headPicImg" alt=""></span><span node-type="statusNode"
+                                                                                   class="W_chat_stat W_chat_stat_offline"></span><span
+                                        node-type="resourceNode"
+                                        class="WBIM_icon_dev WBIM_icon_#{resource}"></span><span node-type="newMsgIcon"
+                                                                                                 class="WBIM_icon_new"></span>
+                                </div>
+                            </li>
+                            <li class="clearfix" node-type="root" action-type="userItem"
+                                action-data="uid=1256607801&amp;from=min">
+                                <div class="webim_list_head webim_head_30"><span class="head_pic"><img
+                                        class="webim_user_item_img"
+                                        src="http://tp2.sinaimg.cn/1256607801/30/1300410657/1" width="30" height="30"
+                                        node-type="headPicImg" alt=""></span><span node-type="statusNode"
+                                                                                   class="W_chat_stat W_chat_stat_offline"></span><span
+                                        node-type="resourceNode"
+                                        class="WBIM_icon_dev WBIM_icon_#{resource}"></span><span node-type="newMsgIcon"
+                                                                                                 class="WBIM_icon_new"></span>
+                                </div>
+                            </li>
+                            <li class="clearfix" node-type="root" action-type="userItem"
+                                action-data="uid=1402784537&amp;from=min">
+                                <div class="webim_list_head webim_head_30"><span class="head_pic"><img
+                                        class="webim_user_item_img"
+                                        src="http://tp2.sinaimg.cn/1402784537/30/5682758154/1" width="30" height="30"
+                                        node-type="headPicImg" alt=""></span><span node-type="statusNode"
+                                                                                   class="W_chat_stat W_chat_stat_offline"></span><span
+                                        node-type="resourceNode"
+                                        class="WBIM_icon_dev WBIM_icon_#{resource}"></span><span node-type="newMsgIcon"
+                                                                                                 class="WBIM_icon_new"></span>
+                                </div>
+                            </li>
+                            <li class="clearfix" node-type="root" action-type="userItem"
+                                action-data="uid=1443626925&amp;from=min">
+                                <div class="webim_list_head webim_head_30"><span class="head_pic"><img
+                                        class="webim_user_item_img" src="http://tp2.sinaimg.cn/1443626925/30/0/1"
+                                        width="30" height="30" node-type="headPicImg" alt=""></span><span
+                                        node-type="statusNode" class="W_chat_stat W_chat_stat_offline"></span><span
+                                        node-type="resourceNode"
+                                        class="WBIM_icon_dev WBIM_icon_#{resource}"></span><span node-type="newMsgIcon"
+                                                                                                 class="WBIM_icon_new"></span>
+                                </div>
+                            </li>
+                            <li class="clearfix" node-type="root" action-type="userItem"
+                                action-data="uid=1646020077&amp;from=min">
+                                <div class="webim_list_head webim_head_30"><span class="head_pic"><img
+                                        class="webim_user_item_img"
+                                        src="http://tp2.sinaimg.cn/1646020077/30/5608943343/2" width="30" height="30"
+                                        node-type="headPicImg" alt=""></span><span node-type="statusNode"
+                                                                                   class="W_chat_stat W_chat_stat_offline"></span><span
+                                        node-type="resourceNode"
+                                        class="WBIM_icon_dev WBIM_icon_#{resource}"></span><span node-type="newMsgIcon"
+                                                                                                 class="WBIM_icon_new"></span>
+                                </div>
+                            </li>
+                            <li class="clearfix" node-type="root" action-type="userItem"
+                                action-data="uid=1783952992&amp;from=min">
+                                <div class="webim_list_head webim_head_30"><span class="head_pic"><img
+                                        class="webim_user_item_img"
+                                        src="http://tp1.sinaimg.cn/1783952992/30/40024428621/2" width="30" height="30"
+                                        node-type="headPicImg" alt=""></span><span node-type="statusNode"
+                                                                                   class="W_chat_stat W_chat_stat_offline"></span><span
+                                        node-type="resourceNode"
+                                        class="WBIM_icon_dev WBIM_icon_#{resource}"></span><span node-type="newMsgIcon"
+                                                                                                 class="WBIM_icon_new"></span>
+                                </div>
+                            </li>
+                            <li class="clearfix" node-type="root" action-type="userItem"
+                                action-data="uid=1795843581&amp;from=min">
+                                <div class="webim_list_head webim_head_30"><span class="head_pic"><img
+                                        class="webim_user_item_img"
+                                        src="http://tp2.sinaimg.cn/1795843581/30/22857720575/2" width="30" height="30"
+                                        node-type="headPicImg" alt=""></span><span node-type="statusNode"
+                                                                                   class="W_chat_stat W_chat_stat_offline"></span><span
+                                        node-type="resourceNode"
+                                        class="WBIM_icon_dev WBIM_icon_#{resource}"></span><span node-type="newMsgIcon"
+                                                                                                 class="WBIM_icon_new"></span>
+                                </div>
+                            </li>
+                            <li class="clearfix" node-type="root" action-type="userItem"
+                                action-data="uid=1249008717&amp;from=min">
+                                <div class="webim_list_head webim_head_30"><span class="head_pic"><img
+                                        class="webim_user_item_img"
+                                        src="http://tp2.sinaimg.cn/1249008717/30/5665913694/2" width="30" height="30"
+                                        node-type="headPicImg" alt=""></span><span node-type="statusNode"
+                                                                                   class="W_chat_stat W_chat_stat_offline"></span><span
+                                        node-type="resourceNode"
+                                        class="WBIM_icon_dev WBIM_icon_#{resource}"></span><span node-type="newMsgIcon"
+                                                                                                 class="WBIM_icon_new"></span>
+                                </div>
+                            </li>
+                            <li class="clearfix" node-type="root" action-type="userItem"
+                                action-data="uid=2112020881&amp;from=min">
+                                <div class="webim_list_head webim_head_30"><span class="head_pic"><img
+                                        class="webim_user_item_img"
+                                        src="http://tp2.sinaimg.cn/2112020881/30/5651934898/1" width="30" height="30"
+                                        node-type="headPicImg" alt=""></span><span node-type="statusNode"
+                                                                                   class="W_chat_stat W_chat_stat_offline"></span><span
+                                        node-type="resourceNode"
+                                        class="WBIM_icon_dev WBIM_icon_#{resource}"></span><span node-type="newMsgIcon"
+                                                                                                 class="WBIM_icon_new"></span>
+                                </div>
+                            </li>
+                            <li class="clearfix" node-type="root" action-type="userItem"
+                                action-data="uid=2405427665&amp;from=min">
+                                <div class="webim_list_head webim_head_30"><span class="head_pic"><img
+                                        class="webim_user_item_img"
+                                        src="http://tp2.sinaimg.cn/2405427665/30/5666697383/1" width="30" height="30"
+                                        node-type="headPicImg" alt=""></span><span node-type="statusNode"
+                                                                                   class="W_chat_stat W_chat_stat_offline"></span><span
+                                        node-type="resourceNode"
+                                        class="WBIM_icon_dev WBIM_icon_#{resource}"></span><span node-type="newMsgIcon"
+                                                                                                 class="WBIM_icon_new"></span>
+                                </div>
+                            </li>
+                            <li class="clearfix" node-type="root" action-type="userItem"
+                                action-data="uid=2470286963&amp;from=min">
+                                <div class="webim_list_head webim_head_30"><span class="head_pic"><img
+                                        class="webim_user_item_img"
+                                        src="http://tp4.sinaimg.cn/2470286963/30/5616463773/1" width="30" height="30"
+                                        node-type="headPicImg" alt=""></span><span node-type="statusNode"
+                                                                                   class="W_chat_stat W_chat_stat_offline"></span><span
+                                        node-type="resourceNode"
+                                        class="WBIM_icon_dev WBIM_icon_#{resource}"></span><span node-type="newMsgIcon"
+                                                                                                 class="WBIM_icon_new"></span>
+                                </div>
+                            </li>
+                            <li class="clearfix" node-type="root" action-type="userItem"
+                                action-data="uid=2684697303&amp;from=min">
+                                <div class="webim_list_head webim_head_30"><span class="head_pic"><img
+                                        class="webim_user_item_img" src="http://tp4.sinaimg.cn/2684697303/30/0/1"
+                                        width="30" height="30" node-type="headPicImg" alt=""></span><span
+                                        node-type="statusNode" class="W_chat_stat W_chat_stat_offline"></span><span
+                                        node-type="resourceNode"
+                                        class="WBIM_icon_dev WBIM_icon_#{resource}"></span><span node-type="newMsgIcon"
+                                                                                                 class="WBIM_icon_new"></span>
+                                </div>
+                            </li>
+                            <li class="clearfix" node-type="root" action-type="userItem"
+                                action-data="uid=2688474813&amp;from=min">
+                                <div class="webim_list_head webim_head_30"><span class="head_pic"><img
+                                        class="webim_user_item_img"
+                                        src="http://tp2.sinaimg.cn/2688474813/30/5629108513/1" width="30" height="30"
+                                        node-type="headPicImg" alt=""></span><span node-type="statusNode"
+                                                                                   class="W_chat_stat W_chat_stat_offline"></span><span
+                                        node-type="resourceNode"
+                                        class="WBIM_icon_dev WBIM_icon_#{resource}"></span><span node-type="newMsgIcon"
+                                                                                                 class="WBIM_icon_new"></span>
+                                </div>
+                            </li>
+                            <li class="clearfix" node-type="root" action-type="userItem"
+                                action-data="uid=2812091200&amp;from=min">
+                                <div class="webim_list_head webim_head_30"><span class="head_pic"><img
+                                        class="webim_user_item_img"
+                                        src="http://tp1.sinaimg.cn/2812091200/30/5632807841/2" width="30" height="30"
+                                        node-type="headPicImg" alt=""></span><span node-type="statusNode"
+                                                                                   class="W_chat_stat W_chat_stat_offline"></span><span
+                                        node-type="resourceNode"
+                                        class="WBIM_icon_dev WBIM_icon_#{resource}"></span><span node-type="newMsgIcon"
+                                                                                                 class="WBIM_icon_new"></span>
+                                </div>
+                            </li>
+                            <li class="clearfix" node-type="root" action-type="userItem"
+                                action-data="uid=2812729560&amp;from=min">
+                                <div class="webim_list_head webim_head_30"><span class="head_pic"><img
+                                        class="webim_user_item_img"
+                                        src="http://tp1.sinaimg.cn/2812729560/30/40023461038/1" width="30" height="30"
+                                        node-type="headPicImg" alt=""></span><span node-type="statusNode"
+                                                                                   class="W_chat_stat W_chat_stat_offline"></span><span
+                                        node-type="resourceNode"
+                                        class="WBIM_icon_dev WBIM_icon_#{resource}"></span><span node-type="newMsgIcon"
+                                                                                                 class="WBIM_icon_new"></span>
+                                </div>
+                            </li>
+                            <li class="clearfix" node-type="root" action-type="userItem"
+                                action-data="uid=2847586451&amp;from=min">
+                                <div class="webim_list_head webim_head_30"><span class="head_pic"><img
+                                        class="webim_user_item_img"
+                                        src="http://tp4.sinaimg.cn/2847586451/30/40019244904/1" width="30" height="30"
+                                        node-type="headPicImg" alt=""></span><span node-type="statusNode"
+                                                                                   class="W_chat_stat W_chat_stat_offline"></span><span
+                                        node-type="resourceNode"
+                                        class="WBIM_icon_dev WBIM_icon_#{resource}"></span><span node-type="newMsgIcon"
+                                                                                                 class="WBIM_icon_new"></span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="top: 0px; z-index: 1000; display: none;" class="wbim_chat_scroll"
+                     node-type="wbim_scroll_root"><em class="scroll_top"></em><em style="height: 67px;"
+                                                                                  class="scroll_main"
+                                                                                  node-type="wbim_scroll_slider"></em><em
+                        class="scroll_bottom"></em></div>
+            </div>
+            <div node-type="fixForPubMsg" style="height: 51px; display:none;"></div>
+            <div node-type="fixForAssist" style="height: 51px; display:none;"></div>
+            <div node-type="settingNode" class="webim_list_setting">
+                <div class="subscribe clearfix" node-type="subscribeNode"><a href="#"><span
+                        class="WBIM_icon_subscribe"></span>订阅</a></div>
+                <div title="展开私信聊天" class="state_setting_btn" action-type="foldButton"
+                     action-data="from=min&amp;type=bottom"><a href="javascript:void(0);" class="unfold_btn"><span
+                        class="WBIM_icon_leftfold"></span></a></div>
+            </div>
+        </div>
+        <a node-type="foldBtn" action-type="foldButton" action-data="from=min" class="webim_fold_btn"
+           href="javascript:void(0);" style="cursor:pointer;"><span class="btn_click"><em
+                class="WB_webim_arrow"></em></span></a></div>
+    <div node-type="baseRoot" class="layer_menu_list"
+         style="position: absolute; z-index: 99999; display: none; visibility: hidden;">
+        <ul node-type="userList"></ul>
+    </div>
+    <div class="wbim_chat_box wbim_chat_box_s"
+         style="position: absolute; right: 68px; bottom: 0px; z-index: 9500; display: block;" node-type="_root">
+        <div class="wbim_chat_con" node-type="_container">
+            <div class="wbim_tit2" node-type="wbim_tit">
+                <div class="wbim_titin" node-type="wbim_titin">
+                    <div class="wbim_tit2_lf"><p class="tit2_lf_con" node-type="wbim_single_user"><a target="_blank"
+                                                                                                     class="webim_list_head webim_head_50"
+                                                                                                     node-type="single_user_head"
+                                                                                                     suda-uatrack="key=tblog_webim_behavior5&amp;value=iconver"
+                                                                                                     href=" http://weibo.com/u/2813452750?source=webim"><span
+                            class="head_pic"><img alt="" node-type="user_pic"
+                                                  src="http://tp3.sinaimg.cn/2813452750/50/5671240198/1"></span><span
+                            class="W_chat_stat W_chat_stat_offline" node-type="wbim_u_status"></span></a><span
+                            class="chat_name" suda-uatrack="key=tblog_webim_behavior5&amp;value=nick"><a target="_blank"
+                                                                                                         node-type="wbim_tit_lf_name"
+                                                                                                         title="klwork"
+                                                                                                         href=" http://weibo.com/u/2813452750?source=webim">klwork</a></span><span
+                            style="display: none;" class="input_state state_inputing"
+                            node-type="wbim_tit_lf_count">正在输入</span></p>
+
+                        <p class="tit2_lf_con" node-type="wbim_group" style="display: none;"><a target="_blank"
+                                                                                                class="webim_list_head webim_head_50"
+                                                                                                node-type="group_head"
+                                                                                                suda-uatrack="key=tblog_webim_behavior5&amp;value=iconver"><span
+                                class="head_pic"><img node-type="group_pic" alt=""></span><span class="WBIM_icon_group"
+                                                                                                node-type="wbim_g_status"></span></a><span
+                                class="txt" suda-uatrack="key=tblog_webim_behavior5&amp;value=nick"><a target="_blank"
+                                                                                                       node-type="wbim_tit_lf_gname"></a><em
+                                class="txtg">在线成员(<a title="查看在线成员" node-type="group_num"
+                                                     target="_blank"></a>)</em></span></p></div>
+                    <div class="wbim_tit2_rt"><a href="javascript:void(0);" onclick="return false;"
+                                                 class="rt_icon WBIM_icon_settingY" hidefocus="true" title="设置"
+                                                 node-type="WBIM_icon_setting"></a><a href="javascript:void(0);"
+                                                                                      onclick="return false;"
+                                                                                      class="rt_icon WBIM_icon_minY"
+                                                                                      hidefocus="true" title="最小化"
+                                                                                      node-type="WBIM_icon_mini"></a><a
+                            href="javascript:void(0);" onclick="return false;" class="rt_icon WBIM_icon_closeY"
+                            hidefocus="true" title="关闭" node-type="WBIM_icon_close"></a></div>
+                </div>
+            </div>
+            <div class="layer_setting" style=" right:-25px; top:-31px;display:none;" node-type="layer_setting">
+                <ul class="setting_list">
+                    <li class="clearfix" node-type="autoHide"><input type="radio" class="WB_radio"
+                                                                     id="WB_radio_autoHideSetting_01"
+                                                                     node-type="autoHideLi"
+                                                                     name="WB_radio_autoHideSetting"><label
+                            for="WB_radio_autoHideSetting_01">自动收起</label></li>
+                    <li class="clearfix" node-type="fixChatWindow"><input type="radio" class="WB_radio"
+                                                                          id="WB_radio_autoHideSetting_02"
+                                                                          node-type="fixChatWindowLi"
+                                                                          name="WB_radio_autoHideSetting"><label
+                            for="WB_radio_autoHideSetting_02">保持展开</label></li>
+                </ul>
+            </div>
+            <div class="wbim_chat_wrap">
+                <div class="webim_win_mutiperson" node-type="_root" style="display: none; visibility: hidden;">
+                    <div class="wbim_chat_lf" node-type="wbim_chat_lf"><a href="javascript:void(0);"
+                                                                          onclick="return false;" hidefocus="true"
+                                                                          class="wbim_scrolltop_n"
+                                                                          node-type="_topBtn"></a>
+
+                        <div class="wbim_chat_friend_box">
+                            <ul class="wbim_chat_friend_list" node-type="_listNode">
+                                <li title="klwork" node-type="_root" action-type="chatTab.onclick"
+                                    action-data="uid=2813452750" class=" wbim_active">
+                                    <div class="list_head_state"><span class="W_chat_stat W_chat_stat_offline"
+                                                                       node-type="_statusNode"></span></div>
+                                    <div class="wbim_username" node-type="_nickNode">klwork<span
+                                            class="wbim_icon_vf"></span></div>
+                                    <a class="WBIM_icon_wbclose" href="javascript:void(0);" onclick="return false;"
+                                       hidefocus="true" node-type="_closeBtn"></a></li>
+                            </ul>
+                        </div>
+                        <a href="javascript:void(0);" onclick="return false;" hidefocus="true" class="wbim_scrollbtm_n"
+                           node-type="_bottomBtn"></a></div>
+                </div>
+                <div class="wbim_chat_rt" style="position: relative;">
+                    <div class="wbim_chat_up" style="height: 297px; overflow: hidden;">
+                        <div class="webim_chat_tips webim_tips01" node-type="_tipsNode"
+                             style="width: 300px; display: block; visibility: visible;"><a hidefocus="true"
+                                                                                           href="javascript:void(0);"
+                                                                                           onclick="return false;"
+                                                                                           node-type="_tipsCloseBtn"
+                                                                                           class="WBIM_icon_tipsclose"></a><span
+                                class="tips_icon icon_warnS"></span><span node-type="_tipsContentNode">对方当前不在线或隐身，可能无法立即回复。</span>
+                        </div>
+                        <div class="wbim_chat_list">
+                            <div class="webim_chat_dialogue"
+                                 style="overflow: hidden; position: relative; height: 272px;">
+                                <div style="top: 0px; display: none; z-index: 1000;" class="wbim_chat_scroll"
+                                     node-type="wbim_scroll_root"><em class="scroll_top"></em><em style="height:0;"
+                                                                                                  class="scroll_main"
+                                                                                                  node-type="wbim_scroll_slider"></em><em
+                                        class="scroll_bottom"></em></div>
+                                <div class="webim_dia_list"
+                                     style="overflow: hidden; padding: 5px; display: block; visibility: visible;">
+                                    <div class="webim_chat_tips webim_tips01 inner_tip">对话中请勿轻信汇款、中奖信息、陌生电话。</div>
+                                    <div class="webim_dia_box webim_dia_r " node-type="msgRoot" mid="3686262043109967"
+                                         time="1394356820000">
+                                        <div class="dia_info"><span class="info_date">3-9 17:20</span></div>
+                                        <div class="webim_dia_bg">
+                                            <div class="dia_con" node-type="conRoot"><p class="dia_txt">hello</p></div>
+                                            <div class="msg_arr"></div>
+                                        </div>
+                                    </div>
+                                    <div class="webim_dia_box webim_dia_r " node-type="msgRoot" mid="3686262060307554"
+                                         time="1394356825000">
+                                        <div class="dia_info"><span class="info_date">3-9 17:20</span></div>
+                                        <div class="webim_dia_bg">
+                                            <div class="dia_con" node-type="conRoot"><p class="dia_txt">sadfsdfdf</p>
+                                            </div>
+                                            <div class="msg_arr"></div>
+                                        </div>
+                                    </div>
+                                    <div class="webim_dia_box webim_dia_r " node-type="msgRoot" mid="3686262114850900"
+                                         time="1394356837000">
+                                        <div class="dia_info"><span class="info_date">3-9 17:20</span></div>
+                                        <div class="webim_dia_bg">
+                                            <div class="dia_con" node-type="conRoot"><p class="dia_txt">发案率</p></div>
+                                            <div class="msg_arr"></div>
+                                        </div>
+                                    </div>
+                                    <div class="webim_msg_end">以上是历史消息</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="webim_chat_sendbox" style="position: relative;">
+                        <div class="sendbox_subbox" style="position: absolute; top: -32px; z-index: 109; display: none;"
+                             node-type="root">
+                            <ul class="subbox clearfix" node-type="menuNode">
+                                <li class="subbox_itm"><a href="#"><em class="W_dot">█</em><span>天气预报</span></a></li>
+                                <li class="subbox_itm"><a href="#"><em class="W_dot">█</em><span>天气预报</span></a></li>
+                                <li class="subbox_itm"><a href="#"><em class="W_dot">█</em><span>天气预报</span></a></li>
+                                <li class="subbox_itm subbox_itm_lst"><a href="#"><em
+                                        class="W_dot">█</em><span>天气预报</span></a></li>
+                            </ul>
+                        </div>
+                        <div class="sendbox_bar clearfix" node-type="wbim_chat_toolbar"
+                             style="position:relative;z-index:109;">
+                            <div class="sendbox_ac"><span class="sendbox_kind" node-type="wbim_chat_toolbarin"> <a
+                                    href="javascript:void(0);" onclick="return false;"
+                                    class="WBIM_icon_com WBIM_iconsend_face" node-type="webim_msgToolBar_face"
+                                    suda-uatrack="key=tblog_webim_behavior5&amp;value=expression_button">表情</a> <a
+                                    href="javascript:void(0);" onclick="return false;"
+                                    class="WBIM_icon_com WBIM_iconsend_img"
+                                    suda-uatrack="key=tblog_webim_behavior5&amp;value=send_private_picture">图片</a> <a
+                                    href="javascript:void(0);" onclick="return false;"
+                                    class="WBIM_icon_com WBIM_iconsend_att"
+                                    suda-uatrack="key=tblog_webim_behavior5&amp;value=send_private_annex">附件</a> <a
+                                    node-type="webim_msgToolBar_cap" href="javascript:void(0);" onclick="return false;"
+                                    class="WBIM_icon_com WBIM_iconsend_copysc" style=""
+                                    suda-uatrack="key=tblog_webim_behavior5&amp;value=send_screenshot_button">截屏</a><a
+                                    hidefocus="true" href="javascript:void(0);" class="WBIM_icon_shield" title="屏蔽当前用户"
+                                    style="vertical-align: middle;"></a><div
+                                    style="position: absolute; z-index: 1500; left: 43px; margin-top: -20px; overflow: hidden; width: 44px;">
+                                <embed width="44" height="16" id="swf_4144"
+                                       src="http://service.weibo.com/staticjs/tools/upload.swf?v=36a89884fc2c6efb"
+                                       type="application/x-shockwave-flash" menu="false" scale="noScale"
+                                       allowfullscreen="true" allowscriptaccess="always" bgcolor="" wmode="transparent"
+                                       data="upload.swf"
+                                       flashvars="swfid=2532413094&amp;maxSumSize=50&amp;maxFileSize=50&amp;maxFileNum=1&amp;multiSelect=0&amp;uploadAPI=http%3A%2F%2Fupload.api.weibo.com%2F2%2Fmss%2Fupload.json%3Fsource%3D209678993&amp;initFun=STK.webim.ui.chatWindow.toolBar.upload.initFun&amp;sucFun=STK.webim.ui.chatWindow.toolBar.upload.sucFun&amp;errFun=STK.webim.ui.chatWindow.toolBar.upload.errFun&amp;beginFun=STK.webim.ui.chatWindow.toolBar.upload.beginFun&amp;showTipFun=STK.webim.ui.chatWindow.toolBar.upload.showTipFun&amp;hiddenTipFun=STK.webim.ui.chatWindow.toolBar.upload.hiddenTipFun&amp;areaInfo=0-16|12-16&amp;fExt=*.jpg;*.gif;*.jpeg;*.png|*&amp;fExtDec=选择图片|选择文件">
+                            </div></span></div>
+                            <div class="sendbox_show "><span class="sendbox_oth"><a
+                                    href="http://weibo.com/message/history?source=webim&amp;uid=2813452750"
+                                    target="_blank" class="sendbox_his" node-type="historyMsgBtn" title="查看私信记录"
+                                    suda-uatrack="key=tblog_webim_behavior5&amp;value=click_chat"><em
+                                    class="WBIM_icon_com WBIM_iconsend_his"></em>聊天记录</a></span></div>
+                            <div class="layer_title" node-type="webim_tips_title"
+                                 style="z-index: 109; left: 110px; top: 30px; display: none;"><span>发送截屏</span></div>
+                        </div>
+                        <div class="sendbox_box clearfix" node-type="_editorRoot">
+                            <div class="wbim_chat_input_tips" node-type="_root" style="display: none;">
+                                <div class="wbim_tips_pos_n" node-type="_previewNode"
+                                     style="display: none; bottom: 50px;">
+                                    <div class="wbim_tips_pic_n"><a href="javascript:void(0);"
+                                                                    onclick="return false;"><img node-type="_imgNode"
+                                                                                                 alt=""
+                                                                                                 action-type="wbim_img_preview"
+                                                                                                 style="cursor:pointer"></a>
+                                    </div>
+                                    <span class="wbim_p_arr"></span></div>
+                                <div class="fl" node-type="_leftNode"></div>
+                                <div class="fr" node-type="_rightNode"></div>
+                            </div>
+                            <textarea style="overflow-y: auto; height: 58px;" class="sendbox_area"
+                                      node-type="_editorNode"></textarea></div>
+                        <div class="sendbox_btn clearfix" node-type="_tipRoot" style="position:relative">
+                            <div class="sendbox_btn_l"><p class="sendbox_link"><span class="link_txt"><a
+                                    href="http://desktop.weibo.com/download.php?source=webim" target="_blank">微博桌面：实时提醒，快速回复！</a></span>
+                            </p></div>
+                            <div class="sendbox_btn_r"><p class="wbim_tips_char"><span
+                                    node-type="_tipNode">195</span><span class="spetxt" node-type="_errorNode"></span>
+                            </p>
+
+                                <div class="btn" node-type="_sendBtnPanel"><a href="javascript:;" class="WBIM_btn_a"
+                                                                              hidefocus="true"
+                                                                              node-type="_sendBtn"><span>发送</span></a>
+
+                                    <div class="wbim_btn_choose"><a href="javascript:;" class="WBIM_btn_a btn_sma"
+                                                                    node-type="_sendBtnSelect"><span><i
+                                            class="WB_webim_arrow"><em class="down">◆</em></i></span></a>
+                                        <ul node-type="_sendBtnSelectUl">
+                                            <li node-type="_enterSendLi" class=" curr"><span><i></i></span><em><a
+                                                    href="javascript:;" node-type="_enterSend">按Enter键发送</a></em></li>
+                                            <li class=" " node-type="_ctrlenterSendLi"><span><i></i></span><em><a
+                                                    href="javascript:;"
+                                                    node-type="_ctrlenterSend">按Ctrl+Enter键发送</a></em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="position: absolute; left: 0px; top: 0px; background-color: rgb(119, 119, 119); opacity: 0.6; z-index: 1001; display: none; visibility: hidden; background-position: initial initial; background-repeat: initial initial;"></div>
+                    <div class="wbim_confirm_box" node-type="wbim_confirm_box"
+                         style="z-index: 1002; display: none; visibility: hidden;">
+                        <div class="wbim_confirm_con">
+                            <div class="wbim_confirm_info"><p class="wbim_confirm_p"><span node-type="wbim_confirm_icon"
+                                                                                           class="webim_cfmicon_stat icon_askS"></span><span
+                                    class="txt" node-type="wbim_confirm_txt"></span></p>
+
+                                <p class="wbim_confirm_btn"><a href="javascript:void(0);" onclick="return false;"
+                                                               class="WBIM_btn_a"
+                                                               node-type="wbim_confirm_confirm"><span>确认</span></a><a
+                                        href="javascript:void(0);" onclick="return false;" class="WBIM_btn_b"
+                                        node-type="wbim_confirm_cancel" style="display:none;"><span>取消</span></a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="position: absolute; left: 0px; top: 0px; background-color: rgb(119, 119, 119); opacity: 0.6; z-index: 1001; display: none; visibility: hidden; background-position: initial initial; background-repeat: initial initial;"></div>
+                    <div class="W_layer" node-type="webimForward"
+                         style="z-index: 1002; left: -50px; top: 20px; display: none; visibility: hidden;">
+                        <div class="bg">
+                            <table cellspacing="0" cellpadding="0" border="0">
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="content">
+                                            <div node-type="title" class="title" style="cursor: move;"><span
+                                                    node-type="title_content">转发私信</span></div>
+                                            <a node-type="close" title="关闭" class="WBIM5_close"
+                                               href="javascript:void(0);"></a>
+
+                                            <div node-type="inner" class="detail WBIM_layer_forward" style="">
+                                                <div class="WBIM_profile_tab S_line5">
+                                                    <ul class="WBIM_pftb_ul S_line1">
+                                                        <li class="WBIM_pftb_title">转发到：</li>
+                                                        <li class="WBIM_pftb_itm S_line1"><a href="javascript:void(0);"
+                                                                                             node-type="weiboTab"
+                                                                                             class="WBIM_pftb_lk S_line5 S_txt1 S_bg5 WBIM_current">我的微博</a>
+                                                        </li>
+                                                        <li class="WBIM_pftb_itm S_line1"><span
+                                                                class="WBIM_icon_rtnew"></span><a
+                                                                href="javascript:void(0);" node-type="meyouTab"
+                                                                class="WBIM_pftb_lk S_line5 S_txt1 S_bg1">密友圈<i
+                                                                title="#{他是你的密友哦~}"
+                                                                class="WBIM_ico16 i_conn_close_friend"></i></a></li>
+                                                        <li class="WBIM_pftb_itm WBIM_pftb_itm_lst S_line1"><a
+                                                                href="javascript:void(0);" node-type="msgTab"
+                                                                class="WBIM_pftb_lk S_line5 S_txt1 S_bg1">私信</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="WBIM_tips tips_warn clearfix" node-type="meyouTip"
+                                                     style="display:none;visibility:hidden;"><p class="icon"><span
+                                                        class="icon_warnS"></span></p>
+
+                                                    <p class="txt">将微博定向转发到密友圈，只有你的密友可见这条微博。</p></div>
+                                                <div node-type="forward_client">
+                                                    <div class="toMicroblogLayer" node-type="toMicroblog_client">
+                                                        <div node-type="choseUser" class="toPrivateMsgLayer"
+                                                             style="display:none;visibility:hidden;">
+                                                            <dl class="WBIM_layer_forward_group clearfix">
+                                                                <dt>收信人：</dt>
+                                                                <dd><input type="text" node-type="choseUserInput"
+                                                                           name="" class="WBIM_input" value="请输入收信人昵称">
+                                                                </dd>
+                                                            </dl>
+                                                        </div>
+                                                        <div class="WBIM_feed_repeat">
+                                                            <div class="input clearfix"><p node-type="numLine"
+                                                                                           class="num"
+                                                                                           style="display: block;"><em
+                                                                    node-type="numberLabel">还可以输入</em><span
+                                                                    node-type="numberValue">140</span> 字</p><textarea
+                                                                    node-type="textElement" title="转发微博内容"
+                                                                    class="WBIM_input" cols="" rows="" name=""
+                                                                    style="margin: 0px 0px 3px; padding: 4px 4px 0px; border: 1px solid rgb(198, 198, 198); font-size: 12px; font-family: Tahoma,宋体; word-wrap: break-word; line-height: 18px; overflow: hidden; outline: medium none; height: 80px;width:296px"
+                                                                    range="0&amp;0"></textarea>
+
+                                                                <div node-type="widget" class="action clearfix"><a
+                                                                        href="javascript:void(0);"
+                                                                        onclick="return false"
+                                                                        class="WBIM_ico16 ico_faces" title="表情"
+                                                                        node-type="faceBtn"></a><!-- <a href="javascript:void(0);" class="WBIM_ico16 icon_sw_img" title="图片" node-type="imgBtn" style="display:none;visibility:hidden;"></a> -->
+                                                                    <!-- <a href="javascript:void(0);" class="WBIM_ico16 icon_sw_accessory" title="附件" node-type="attBtn" style="display:none;visibility:hidden;"></a> -->
+                                                                </div>
+                                                                <p class="btn"><a node-type="submitBtn"
+                                                                                  class="WBIM_btn_b btn_noloading"
+                                                                                  title="转发按钮"
+                                                                                  href="javascript:void(0);"
+                                                                                  onclick="return false"><span><em
+                                                                        node-type="loadingIcon" class="icon_loading"
+                                                                        style="display: none; visibility: hidden;"></em><em
+                                                                        node-type="btnText">转发</em></span></a></p></div>
+                                                        </div>
+                                                        <div node-type="forward_link">
+                                                            <div class="func"></div>
+                                                            <div style="display: none;" class="WBIM_feed_repeat"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div node-type="warnTip" class="wbim_confirm_box"
+                             style="left:70px;top:120px;display:none;visibility:hidden;">
+                            <div class="wbim_confirm_con">
+                                <div class="wbim_confirm_info"><p class="wbim_confirm_p"><span
+                                        class="webim_cfmicon_stat icon_warnS"></span><span node-type="warnText"
+                                                                                           class="txt"></span></p>
+
+                                    <p class="wbim_confirm_btn" style="text-align: right"><a href="javascript:void(0);"
+                                                                                             node-type="warnBtn"
+                                                                                             class="WBIM_btn_a"><span>确认</span></a>
+                                    </p></div>
+                            </div>
+                        </div>
+                        <div node-type="successTip" class="bg"
+                             style="position: absolute; left:100px;top:120px;display:none;visibility:hidden;">
+                            <table border="0" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="content layer_mini_info" style="width: 100px;"><p class="clearfix">
+                                            <span class="icon_succS"></span>发送成功</p></div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div node-type="chatMiniRoot" action-type="chatmini" action-data="from=chatmini"
+         class="webim_win_minD wbim_min_chat"
+         style="cursor: pointer; position: absolute; bottom: 0px; right: 68px; visibility: hidden; display: none;">
+        klwork
+    </div>
+    <div class="W_layer" node-type="wbim_lastWeibo_root" style="display: none; z-index: 8888;">
+        <div class="bg">
+            <table cellspacing="0" cellpadding="0" border="0">
+                <tbody>
+                <tr>
+                    <td>
+                        <div class="content">
+                            <div class="WBIM_layer_detail">
+                                <div class="WB_webim WBIM_last_feed" node-type="webim_lastweibo_hasweibo"
+                                     style="display:none;">
+                                    <div class="WBIM_feed_wrap feed_small_show" node-type="wbim_lastWeibo_wrap">
+                                        <div node-type="wbim_lastWeibo_feedArea"
+                                             style="position: relative; overflow: hidden;">
+                                            <div class="WBIM_feed_box" style="overflow:hidden;">
+                                                <div class="WBIM_feed_list clearfix">
+                                                    <div class="webim_feed_pic" node-type="wbim_lastWeibo_avatar"
+                                                         suda-uatrack="key=tblog_webim_behavior5&amp;value=float_layer_iconver"></div>
+                                                    <div class="webim_head_txt"><p class="webim_feed_name"
+                                                                                   node-type="wbim_lastWeibo_name"
+                                                                                   suda-uatrack="key=tblog_webim_behavior5&amp;value=float_layer_name"></p>
+
+                                                        <p class="webim_feed_txt" node-type="wbim_lastWeibo_txt"></p>
+                                                    </div>
+                                                </div>
+                                                <div class="WBIM_feed_main  clearfix">
+                                                    <div class="feed_expand" node-type="wbim_lastWeibo_imgArea">
+                                                        <div class="small_pic">
+                                                            <div class="pic_list"><a class="bigcursor"
+                                                                                     href="javascript:void(0);"
+                                                                                     onclick="return false;"><img
+                                                                    alt=""></a></div>
+                                                        </div>
+                                                        <div class="big_pic">
+                                                            <div class="pic_action"
+                                                                 node-type="wbim_lastweibo_picaction"><a
+                                                                    href="javascript:void(0);" onclick="return false;"
+                                                                    node-type="wbim_lastWeibo_fold"><em
+                                                                    class="WBIM_icon_foldpic"></em><span class="ac_txt">收起</span></a><em
+                                                                    class="W_vline">|</em><a href="javascript:;"
+                                                                                             target="_blank"
+                                                                                             node-type="wbim_lastWeibo_preview"><em
+                                                                    class="WBIM_icon_showbig"></em><span class="ac_txt">查看大图</span></a>
+                                                            </div>
+                                                            <div class="bigpic_box" style="text-align:center;"><a
+                                                                    class="smallcursor" href="javascript:void(0);"
+                                                                    onclick="return false;"><img alt=""
+                                                                                                 style="width:auto;"></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="webim_feed_more" style="overflow:hidden;"><p
+                                                            class="feed_date"><a href="javascript:;" target="_blank"
+                                                                                 node-type="wbim_lastWeibo_time"
+                                                                                 suda-uatrack="key=tblog_webim_behavior5&amp;value=date"></a>
+                                                    </p>
+
+                                                        <p class="feed_oth" style="white-space:nowrap;"><span
+                                                                class="feed_re"
+                                                                suda-uatrack="key=tblog_webim_behavior5&amp;value=tran"><a
+                                                                node-type="lastweibo_repost_url" target="_blank"
+                                                                class="re_txt" href="javascript:;">转发<em class="re_num">(<span
+                                                                node-type="lastweibo_repost_count"></span>)</em></a></span><span
+                                                                class="feed_com"
+                                                                suda-uatrack="key=tblog_webim_behavior5&amp;value=comm"><a
+                                                                node-type="lastweibo_comment_url" target="_blank"
+                                                                class="com_txt" href="javascript:;">评论<em
+                                                                class="com_num">(<span
+                                                                node-type="lastweibo_comment_count"></span>)</em></a></span>
+                                                        </p></div>
+                                                </div>
+                                            </div>
+                                            <div class="WBIM_comment_list" style="display:none;"
+                                                 node-type="wbim_lastWeibo_contentArea">
+                                                <ul class="comment_list"></ul>
+                                            </div>
+                                            <div style="top: 0px; display: none; z-index: 1000;"
+                                                 class="wbim_chat_scroll" node-type="wbim_scroll_root"><em
+                                                    class="scroll_top"></em><em style="height:0;" class="scroll_main"
+                                                                                node-type="wbim_scroll_slider"></em><em
+                                                    class="scroll_bottom"></em></div>
+                                        </div>
+                                        <div class="webim_comment_wrap">
+                                            <div class="webim_comment_box">
+                                                <div class="comment_state_box">
+                                                    <div class="comment_input"><textarea style="overflow-y:auto;"
+                                                                                         class="comment_area"
+                                                                                         node-type="wbim_lastWeibo_input">$L{来评论两句...}</textarea>
+                                                    </div>
+                                                    <div style="display:none;" class="comment_state"
+                                                         node-type="wbim_lastWeibo_errmsg"><p class="state_tip"><span
+                                                            class="tip_icon icon_delS"></span><span class="state_txt">无法进行指定操作,您可以<a
+                                                            href="javascript:;">查看规定</a>或<a href="javascript:;">联系客服</a></span>
+                                                    </p></div>
+                                                </div>
+                                                <div class="comment_btn_box clearfix" style="display:none;"
+                                                     node-type="wbim_lastWeibo_action"><p class="comment_kind"><a
+                                                        class="WBIM_icon_com icon_sw_face" href="javascript:void(0);"
+                                                        onclick="return false;" node-type="wbim_lastWeibo_phiz">表情</a>
+                                                </p>
+
+                                                    <p class="comment_btn"><a class="WBIM_btn_a"
+                                                                              href="javascript:void(0);"
+                                                                              onclick="return false;"
+                                                                              node-type="wbim_lastWeibo_submit"
+                                                                              suda-uatrack="key=tblog_webim_behavior5&amp;value=comm_button"><span>评论</span></a>
+                                                    </p></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="WB_webim WBIM_last_feed" style="display:;"
+                                     node-type="webim_lastweibo_noweibo"></div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <div node-type="webim_lastweibo_arr" class="arrow arrow_r"></div>
+        </div>
+    </div>
+</div>
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script src="./test.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+.ui-dialog-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #000000;
+}
+.ui-dialog-backdrop.fade {
+  opacity: 0;
+}
+.ui-dialog-backdrop,
+.ui-dialog-backdrop.fade.in {
+  opacity: .8;
+}
+.ui-dialog {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  z-index: 1050;
+  width: 560px;
+  display: inline;
+  margin-left: -280px;
+  background-color: #fff;
+  border: 1px solid #999;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  *border: 1px solid #999;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  outline: 0;
+  -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.ui-dialog.fade {
+  top: -25%;
+  -webkit-transition: opacity 0.3s linear, top 0.3s ease-out;
+  -moz-transition: opacity 0.3s linear, top 0.3s ease-out;
+  -o-transition: opacity 0.3s linear, top 0.3s ease-out;
+  transition: opacity 0.3s linear, top 0.3s ease-out;
+}
+.ui-dialog.fade.in {
+  top: 10%;
+}
+.ui-dialog-header {
+  padding: 9px 15px;
+  border-bottom: 1px solid #eeeeee;
+}
+.ui-dialog-header .close {
+  margin-top: 2px;
+}
+.ui-dialog-header h3 {
+  margin: 0;
+  line-height: 30px;
+}
+.ui-dialog-body {
+  position: relative;
+  max-height: 400px;
+  padding: 15px;
+  overflow-y: auto;
+}
+.ui-dialog-form {
+  margin-bottom: 0;
+}
+.ui-dialog-footer {
+  padding: 14px 15px 15px;
+  margin-bottom: 0;
+  text-align: right;
+  background-color: #f5f5f5;
+  border-top: 1px solid #ddd;
+  -webkit-border-radius: 0 0 6px 6px;
+  -moz-border-radius: 0 0 6px 6px;
+  border-radius: 0 0 6px 6px;
+  *zoom: 1;
+  -webkit-box-shadow: inset 0 1px 0 #fff;
+  -moz-box-shadow: inset 0 1px 0 #fff;
+  box-shadow: inset 0 1px 0 #ffffff;
+}
+.ui-dialog-footer:before,
+.ui-dialog-footer:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+.ui-dialog-footer:after {
+  clear: both;
+}
+.ui-dialog-footer .btn + .btn {
+  margin-bottom: 0;
+  margin-left: 5px;
+}
+.ui-dialog-footer .btn-group .btn + .btn {
+  margin-left: -1px;
+}
+.ui-dialog-footer .btn-block + .btn-block {
+  margin-left: 0;
+}
