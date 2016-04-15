@@ -1,4 +1,7 @@
 # kl-angular-node
+npm install
+npm bower -g
+npm grunt -g
 
 **测试
 grunt server

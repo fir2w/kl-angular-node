@@ -83,7 +83,7 @@
     'ngParse': 'bower_components/requirejs-angular-define/src/ngParse',
     'domReady': 'bower_components/requirejs-domready/domReady',
     'underscore': 'bower_components/underscore/underscore',
-    'jquery': 'bower_components/jquery/dist/jquery',
+    'jquery': 'bower_components/jquery/jquery',
     'jquery-slimscroll': 'bower_components/jquery.slimscroll/jquery.slimscroll',
     'jquery.ui.core': 'bower_components/jquery-ui/ui/jquery.ui.core',
     'jquery.ui.widget': 'bower_components/jquery-ui/ui/jquery.ui.widget',
